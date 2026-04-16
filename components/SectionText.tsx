@@ -16,7 +16,7 @@ export default function SectionText({
         {label}
       </p>
       <h2
-        className={`text-charcoal font-medium text-[48px] text-${orientation || "center"}`}
+        className={`text-charcoal font-medium text-[48px] text-${orientation || "center"} whitespace-pre-line`}
       >
         {title}
       </h2>

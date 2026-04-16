@@ -1,3 +1,5 @@
+import { url } from "inspector";
+
 export const paraQuienCardsData = [
   {
     number: "01",
@@ -22,5 +24,22 @@ export const paraQuienCardsData = [
     title: "Empresas y organizaciones",
     description:
       "Buscás alinear imagen, cultura y comunicación de equipos para generar coherencia de marca.",
+  },
+];
+
+export const programasCardsData = [
+  {
+    label: "Programa Base",
+    title: "Esencia",
+    text: "Ideal si querés empezar a trabajar tu imagen de forma consciente. Un  proceso diseñado para que te conozcas, definas tu identidad y la  traduzcas en decisiones claras.",
+    button_text: "Quiero este programa",
+    url: "#",
+  },
+  {
+    label: "Programa intensivo — 6 semanas",
+    title: "Presencia",
+    text: "Incluye marca personal, comunicación y acompañamiento personalizado.  Para quienes quieren un cambio profundo y resultados medibles en su  presencia y posicionamiento.",
+    button_text: "Aplicar al programa",
+    url: "#",
   },
 ];

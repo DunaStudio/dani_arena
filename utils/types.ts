@@ -10,3 +10,11 @@ export interface ParaQuienCardProps {
   title: string;
   description: string;
 }
+
+export interface ProgramaCardProps {
+  label: string;
+  title: string;
+  text: string;
+  button_text: string;
+  url: string;
+}
