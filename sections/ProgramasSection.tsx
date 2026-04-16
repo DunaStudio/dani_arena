@@ -11,7 +11,7 @@ export default function ProgramasSection() {
           title={`Procesos de\n transformación real`}
           orientation="left"
         />
-        <div className="w-full flex gap-5">
+        <div className="w-full flex gap-5 mt-15">
           {programasCardsData.map((programa) => (
             <ProgramaCard
               key={programa.title}

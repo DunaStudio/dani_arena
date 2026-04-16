@@ -12,7 +12,7 @@ export default function ParaQuienSection() {
           text="Mi enfoque está en profesionales y organizaciones que entienden que la imagen es una inversión estratégica. No es vanidad — es visibilidad."
           orientation="center"
         />
-        <div className="grid grid-cols-2 gap-5 mt-25">
+        <div className="grid grid-cols-2 gap-5 mt-15">
           {paraQuienCardsData.map((card) => (
             <ParaQuienCard
               key={card.number}
