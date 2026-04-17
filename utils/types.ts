@@ -18,3 +18,9 @@ export interface ProgramaCardProps {
   button_text: string;
   url: string;
 }
+
+export interface TestimonioCardProps {
+  name: string;
+  position: string;
+  testimony: string;
+}

@@ -2,6 +2,7 @@ import FraseSection from "@/sections/FraseSection";
 import GaleriaSection from "@/sections/GaleriaSection";
 import ParaQuienSection from "@/sections/ParaQuienSection";
 import ProgramasSection from "@/sections/ProgramasSection";
+import TestimoniosSection from "@/sections/TestimoniosSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <ProgramasSection />
       <FraseSection />
       <GaleriaSection />
+      <TestimoniosSection />
     </div>
   );
 }
