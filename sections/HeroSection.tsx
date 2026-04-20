@@ -18,12 +18,13 @@ export default function HeroSection() {
         </p>
 
         <div className="w-full mt-14 rounded-[10px] overflow-hidden aspect-video">
-          <iframe
-            src="https://player.vimeo.com/video/1184397731?title=0&byline=0&portrait=0&dnt=1"
-            className="w-full h-full"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <video
+            className="w-full h-full object-cover"
+            controls
+            playsInline
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>
