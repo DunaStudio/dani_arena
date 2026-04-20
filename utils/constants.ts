@@ -76,3 +76,41 @@ export const testimoniosCardsData = [
       "Recomendaría este programa a cualquier profesional que quiera trabajar su imagen de forma consciente. Es un proceso profundo que va más allá de lo estético y realmente te ayuda a conectar con tu esencia.",
   },
 ];
+
+export const servicios = [
+  {
+    title: "Imagen personal",
+    description:
+      "Procesos para alinear tu imagen con tu identidad y objetivos. Trabajo integral desde la base.",
+    cta: "Ver programas",
+    url: "#",
+  },
+  {
+    title: "Empresas y liderazgo",
+    description:
+      "Consultoría y capacitaciones para equipos y organizaciones. Imagen, cultura y comunicación alineadas.",
+    cta: "Trabajar con mi equipo",
+    url: "#",
+  },
+  {
+    title: "Workshops y charlas",
+    description:
+      "Espacios para trabajar imagen, comunicación y presencia en formatos grupales y empresariales.",
+    cta: "Consultar disponibilidad",
+    url: "#",
+  },
+  {
+    title: "Asesorías express",
+    description:
+      "Soluciones puntuales para momentos clave. Sesiones focalizadas con resultado inmediato.",
+    cta: "Agendar sesión",
+    url: "#",
+  },
+  {
+    title: "Colorimetría",
+    description:
+      "Análisis de tonos para tu imagen natural. Herramientas precisas para una armonía visual.",
+    cta: "Ver propuesta",
+    url: "#",
+  },
+];

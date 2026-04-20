@@ -14,11 +14,17 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-white px-20 py-4 flex items-center justify-between sticky top-0 z-50">
+    <nav className="w-full bg-white px-20 py-4 flex items-center justify-between sticky top-0 z-50 border-b border-porcelain">
       <Link href="/">
-        <Image src="/logo.svg" alt="Dani Arena" width={90} height={56} />
+        <Image
+          src="/logo.svg"
+          alt="Dani Arena"
+          width={90}
+          height={56}
+          quality={100}
+        />
       </Link>
-      <div className="flex items-center gap-7">
+      <div className="flex items-center gap-9">
         {links.map((link) => (
           <Link
             key={link.label}

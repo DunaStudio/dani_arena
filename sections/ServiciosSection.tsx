@@ -1,40 +1,4 @@
-const servicios = [
-  {
-    title: "Imagen personal",
-    description:
-      "Procesos para alinear tu imagen con tu identidad y objetivos. Trabajo integral desde la base.",
-    cta: "Ver programas",
-    url: "#",
-  },
-  {
-    title: "Empresas y liderazgo",
-    description:
-      "Consultoría y capacitaciones para equipos y organizaciones. Imagen, cultura y comunicación alineadas.",
-    cta: "Trabajar con mi equipo",
-    url: "#",
-  },
-  {
-    title: "Workshops y charlas",
-    description:
-      "Espacios para trabajar imagen, comunicación y presencia en formatos grupales y empresariales.",
-    cta: "Consultar disponibilidad",
-    url: "#",
-  },
-  {
-    title: "Asesorías express",
-    description:
-      "Soluciones puntuales para momentos clave. Sesiones focalizadas con resultado inmediato.",
-    cta: "Agendar sesión",
-    url: "#",
-  },
-  {
-    title: "Colorimetría",
-    description:
-      "Análisis de tonos para tu imagen natural. Herramientas precisas para una armonía visual.",
-    cta: "Ver propuesta",
-    url: "#",
-  },
-];
+import { servicios } from "@/utils/constants";
 
 export default function ServiciosSection() {
   return (
@@ -53,7 +17,7 @@ export default function ServiciosSection() {
           {servicios.map((servicio) => (
             <div
               key={servicio.title}
-              className="flex-1 bg-white border border-charcoal/15 px-6 py-6 flex flex-col gap-4 rounded-sm"
+              className="flex-1 bg-white border-charcoal/15 px-6 py-6 flex flex-col gap-4 rounded-[5px]"
             >
               <p className="text-charcoal font-medium text-[20px]">
                 {servicio.title}

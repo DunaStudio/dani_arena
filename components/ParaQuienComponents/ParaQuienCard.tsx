@@ -19,8 +19,8 @@ export default function ParaQuienCard({
         <p className="font-light text-[20px] opacity-70 text-charcoal">
           {number}
         </p>
-        <p className="font-medium text-charcoal text-[20px] mt-5">{title}</p>
-        <p className="text-charcoal opacity-70 font-light text-[18px] mt-2.5">
+        <p className="font-medium text-charcoal text-[16px] mt-5">{title}</p>
+        <p className="text-charcoal opacity-70 font-light text-[14px] mt-2.5">
           {description}
         </p>
       </div>

@@ -7,6 +7,9 @@ import SobreMiSection from "@/sections/SobreMiSection";
 import ParaQuienSection from "@/sections/ParaQuienSection";
 import ProgramasSection from "@/sections/ProgramasSection";
 import TestimoniosSection from "@/sections/TestimoniosSection";
+import TrayectoriaSection from "@/sections/TrayectoriaSection";
+import ContactSection from "@/sections/ContactSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +23,9 @@ export default function Home() {
       <FraseSection />
       <GaleriaSection />
       <TestimoniosSection />
+      <TrayectoriaSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 }

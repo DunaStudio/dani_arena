@@ -11,17 +11,17 @@ export default function SectionText({
       className={`max-w-200 flex flex-col justify-center items-${orientation || "center"}`}
     >
       <p
-        className={`text-goldenOrange uppercase font-400 tracking-[25%] text-${orientation || "center"}}`}
+        className={`text-goldenOrange uppercase font-400 tracking-[0.25em] text-sm text-${orientation || "center"}}`}
       >
         {label}
       </p>
       <h2
-        className={`text-charcoal font-medium text-[48px] text-${orientation || "center"} whitespace-pre-line`}
+        className={`text-charcoal font-medium text-[48px] text-${orientation || "center"} whitespace-pre-line mt-4`}
       >
         {title}
       </h2>
       <p
-        className={`text-charcoal opacity-70 text-${orientation || "center"} max-w-[80%] mt-6.25 font-400`}
+        className={`text-charcoal opacity-70 text-${orientation || "center"} max-w-[80%] mt-6 font-light text-base`}
       >
         {text}
       </p>

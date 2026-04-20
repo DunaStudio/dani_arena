@@ -13,7 +13,7 @@ export default function GaleriaSection() {
         />
 
         <div className="grid grid-cols-12 grid-rows-2 gap-4 w-full mt-15">
-          <div className="relative overflow-hidden h-50 border rounded-[5px] col-span-2">
+          <div className="relative overflow-hidden h-50 rounded-[5px] col-span-2">
             <Image
               src={Imagen}
               alt="Imagen 1"
@@ -21,7 +21,7 @@ export default function GaleriaSection() {
               objectFit="cover"
             />
           </div>
-          <div className="relative overflow-hidden h-50 border rounded-[5px] col-span-4 col-start-3">
+          <div className="relative overflow-hidden h-50 rounded-[5px] col-span-4 col-start-3">
             <Image
               src={Imagen}
               alt="Imagen 2"
@@ -29,7 +29,7 @@ export default function GaleriaSection() {
               objectFit="cover"
             />
           </div>
-          <div className="relative overflow-hidden h-50 border rounded-[5px] col-span-3 col-start-7">
+          <div className="relative overflow-hidden h-50 rounded-[5px] col-span-3 col-start-7">
             <Image
               src={Imagen}
               alt="Imagen 3"
@@ -37,7 +37,7 @@ export default function GaleriaSection() {
               objectFit="cover"
             />
           </div>
-          <div className="relative overflow-hidden h-50 border rounded-[5px] col-span-3 col-start-10">
+          <div className="relative overflow-hidden h-50 rounded-[5px] col-span-3 col-start-10">
             <Image
               src={Imagen}
               alt="Imagen 4"
@@ -45,7 +45,7 @@ export default function GaleriaSection() {
               objectFit="cover"
             />
           </div>
-          <div className="relative overflow-hidden h-50 border rounded-[5px] col-span-3 row-start-2">
+          <div className="relative overflow-hidden h-50 rounded-[5px] col-span-3 row-start-2">
             <Image
               src={Imagen}
               alt="Imagen 4"
@@ -53,7 +53,7 @@ export default function GaleriaSection() {
               objectFit="cover"
             />
           </div>
-          <div className="relative overflow-hidden h-50 border rounded-[5px] col-span-2 col-start-4 row-start-2">
+          <div className="relative overflow-hidden h-50 rounded-[5px] col-span-2 col-start-4 row-start-2">
             <Image
               src={Imagen}
               alt="Imagen 4"
@@ -61,7 +61,7 @@ export default function GaleriaSection() {
               objectFit="cover"
             />
           </div>
-          <div className="relative overflow-hidden h-50 border rounded-[5px] col-span-5 col-start-6 row-start-2">
+          <div className="relative overflow-hidden h-50 rounded-[5px] col-span-5 col-start-6 row-start-2">
             <Image
               src={Imagen}
               alt="Imagen 4"
@@ -69,7 +69,7 @@ export default function GaleriaSection() {
               objectFit="cover"
             />
           </div>
-          <div className="relative overflow-hidden h-50 border rounded-[5px] col-span-2 col-start-11 row-start-2">
+          <div className="relative overflow-hidden h-50 rounded-[5px] col-span-2 col-start-11 row-start-2">
             <Image
               src={Imagen}
               alt="Imagen 4"

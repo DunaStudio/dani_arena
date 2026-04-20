@@ -1,8 +1,12 @@
+import SectionText from "@/components/SectionText";
+
 export default function HeroSection() {
   return (
     <section
       className="w-full flex flex-col items-center justify-center px-20 pt-20 pb-0"
-      style={{ background: "linear-gradient(to bottom, white 72%, #fbf9f6 72%)" }}
+      style={{
+        background: "linear-gradient(to bottom, white 72%, #fbf9f6 72%)",
+      }}
     >
       <div className="max-w-300 w-full flex flex-col items-center">
         <p className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal">
@@ -18,11 +22,7 @@ export default function HeroSection() {
         </p>
 
         <div className="w-full mt-14 rounded-[10px] overflow-hidden aspect-video">
-          <video
-            className="w-full h-full object-cover"
-            controls
-            playsInline
-          >
+          <video className="w-full h-full object-cover" controls playsInline>
             <source src="/hero.mp4" type="video/mp4" />
           </video>
         </div>
