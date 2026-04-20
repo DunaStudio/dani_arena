@@ -1,6 +1,9 @@
 export default function HeroSection() {
   return (
-    <section className="w-full flex flex-col items-center justify-center px-20 pt-20 pb-0 bg-white">
+    <section
+      className="w-full flex flex-col items-center justify-center px-20 pt-20 pb-0"
+      style={{ background: "linear-gradient(to bottom, white 72%, #fbf9f6 72%)" }}
+    >
       <div className="max-w-300 w-full flex flex-col items-center">
         <p className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal">
           Consultoría de imagen integral

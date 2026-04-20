@@ -44,7 +44,7 @@ export default function ServiciosSection() {
           <p className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal">
             Servicios
           </p>
-          <h2 className="text-charcoal text-[48px] font-medium leading-[1.2] mt-4 max-w-[520px]">
+          <h2 className="text-charcoal text-[48px] font-medium leading-[1.2] mt-4 max-w-130">
             Soluciones de imagen para cada necesidad
           </h2>
         </div>
