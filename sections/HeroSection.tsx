@@ -1,7 +1,12 @@
 "use client";
+import videoPoster from "@/public/images/heroVideoImg.png";
+import { useState } from "react";
+import Image from "next/image";
 import { FadeIn, FadeUp, RevealLine } from "@/components/motion";
 
 export default function HeroSection() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <section
       id="inicio"
@@ -33,19 +38,49 @@ export default function HeroSection() {
 
         <FadeIn
           delay={0.4}
-          className="w-full mt-14 rounded-[10px] overflow-hidden aspect-video"
+          className="w-full mt-14 rounded-[10px] overflow-hidden aspect-video relative"
         >
-          <video
-            className="w-full h-full object-cover"
-            controls
-            playsInline
-            preload="metadata"
-          >
-            <source
-              src="https://res.cloudinary.com/djwaj0qea/video/upload/v1776882151/hero_qukk12.mp4"
-              type="video/mp4"
-            />
-          </video>
+          {!isPlaying ? (
+            <button
+              onClick={() => setIsPlaying(true)}
+              className="w-full h-full relative block group"
+              aria-label="Reproducir video"
+            >
+              <Image
+                src={videoPoster}
+                alt="Vista previa del video"
+                fill
+                className="object-cover"
+                priority
+              />
+              {/* Overlay oscuro sutil */}
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
+              {/* Botón play */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                  <svg
+                    className="w-7 h-7 md:w-8 md:h-8 text-charcoal ml-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          ) : (
+            <video
+              className="w-full h-full object-cover"
+              controls
+              playsInline
+              autoPlay
+            >
+              <source
+                src="https://res.cloudinary.com/djwaj0qea/video/upload/v1776882151/hero_qukk12.mp4"
+                type="video/mp4"
+              />
+            </video>
+          )}
         </FadeIn>
       </div>
     </section>
