@@ -9,13 +9,22 @@ import logo4 from "@/public/images/EmpresasLogos/logo4.png";
 import logo5 from "@/public/images/EmpresasLogos/logo5.png";
 import logo6 from "@/public/images/EmpresasLogos/logo6.png";
 import logo7 from "@/public/images/EmpresasLogos/logo7.png";
+
+import medio01 from "@/public/images/MediosLogos/TodoNormal.png";
+import medio02 from "@/public/images/MediosLogos/huarpe.png";
+import medio03 from "@/public/images/MediosLogos/mananasCompartidas.png";
+import medio04 from "@/public/images/MediosLogos/radioLaVoz.png";
+import medio05 from "@/public/images/MediosLogos/teLoTengoQueDecir.png";
+import medio06 from "@/public/images/MediosLogos/yoTeInvito.png";
+
 import { FadeIn, RevealLine } from "@/components/motion";
 
-type TabKey = "empresas" | "formacion" | "medios" | "eventos";
+type TabKey = "empresas" | "medios" | "eventos";
 
 interface TabContent {
   description: string;
   logos: { name: string; src: string }[];
+  videos?: { src: string; title?: string }[];
 }
 
 const tabsData: Record<TabKey, TabContent> = {
@@ -32,47 +41,32 @@ const tabsData: Record<TabKey, TabContent> = {
       { name: "Africa", src: logo7.src },
     ],
   },
-  formacion: {
-    description:
-      "Formé parte de programas académicos, talleres y espacios de aprendizaje donde la presencia es protagonista.",
-    logos: [
-      { name: "Makro", src: "/logos/makro.svg" },
-      { name: "Fiat", src: "/logos/fiat.svg" },
-      { name: "Porota", src: "/logos/porota.svg" },
-      { name: "Banco San Juan", src: "/logos/banco-san-juan.svg" },
-      { name: "Sushi Club", src: "/logos/sushiclub.svg" },
-      { name: "Fiat", src: "/logos/fiat.svg" },
-    ],
-  },
+
   medios: {
     description:
       "Apariciones en medios gráficos, digitales y audiovisuales compartiendo perspectivas sobre imagen e identidad.",
     logos: [
-      { name: "Sushi Club", src: "/logos/sushiclub.svg" },
-      { name: "Banco San Juan", src: "/logos/banco-san-juan.svg" },
-      { name: "Makro", src: "/logos/makro.svg" },
-      { name: "Porota", src: "/logos/porota.svg" },
+      { name: "Todo Normal", src: medio01.src },
+      { name: "Huarpe", src: medio02.src },
+      { name: "Mañanas Compartidas", src: medio03.src },
+      { name: "Radio La Voz", src: medio04.src },
+      { name: "Te Lo Tengo Que Decir", src: medio05.src },
+      { name: "Yo Te Invito", src: medio06.src },
     ],
   },
   eventos: {
     description:
       "Participé como oradora y consultora en eventos, conferencias y encuentros del mundo corporativo y creativo.",
-    logos: [
-      { name: "Fiat", src: "/logos/fiat.svg" },
-      { name: "Porota", src: "/logos/porota.svg" },
-      { name: "Sushi Club", src: "/logos/sushiclub.svg" },
-      { name: "Makro", src: "/logos/makro.svg" },
-      { name: "Banco San Juan", src: "/logos/banco-san-juan.svg" },
-      { name: "Fiat", src: "/logos/fiat.svg" },
-      { name: "Makro", src: "/logos/makro.svg" },
-      { name: "Porota", src: "/logos/porota.svg" },
+    logos: [],
+    videos: [
+      { src: "/reel-porota.mp4", title: "Evento Porota" },
+      { src: "/reel-sushi-club.mp4", title: "Evento Sushi Club" },
     ],
   },
 };
 
 const tabs: { key: TabKey; label: string }[] = [
   { key: "empresas", label: "Empresas" },
-  { key: "formacion", label: "Formación" },
   { key: "medios", label: "Medios" },
   { key: "eventos", label: "Eventos" },
 ];
@@ -88,7 +82,7 @@ function LogoItem({
 }) {
   return (
     <div
-      className="flex items-center justify-center relative h-36 aspect-square"
+      className="flex items-center justify-center relative h-30 aspect-square"
       style={{
         opacity: 0,
         animation: `logoIn 0.35s ease forwards`,
@@ -99,6 +93,7 @@ function LogoItem({
         src={src}
         alt={name}
         fill
+        quality={75}
         className="max-h-50 max-w-full object-contain opacity-70 saturate-0 hover:opacity-100 transition-all duration-200 hover:saturate-100 scale-90 hover:scale-100"
         onError={(e) => {
           const img = e.target as HTMLImageElement;
@@ -240,19 +235,45 @@ export default function TrayectoriaSection() {
               {content.description}
             </p>
 
-            <div
-              key={displayTab}
-              className="w-full flex flex-wrap justify-center gap-4 "
-            >
-              {content.logos.map((logo, i) => (
-                <LogoItem
-                  key={`${displayTab}-${i}`}
-                  name={logo.name}
-                  src={logo.src}
-                  index={i}
-                />
-              ))}
-            </div>
+            {content.videos && content.videos.length > 0 ? (
+              <div className="w-full flex flex-wrap justify-center gap-6">
+                {content.videos.map((video, i) => (
+                  <div
+                    key={i}
+                    className="relative overflow-hidden rounded-xl bg-black shadow-lg"
+                    style={{
+                      width: "min(220px, 45%)",
+                      aspectRatio: "9 / 16",
+                      opacity: 0,
+                      animation: `logoIn 0.35s ease forwards`,
+                      animationDelay: `${i * 80}ms`,
+                    }}
+                  >
+                    <video
+                      src={video.src}
+                      title={video.title}
+                      controls
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div
+                key={displayTab}
+                className="w-full flex flex-wrap justify-center gap-4"
+              >
+                {content.logos.map((logo, i) => (
+                  <LogoItem
+                    key={`${displayTab}-${i}`}
+                    name={logo.name}
+                    src={logo.src}
+                    index={i}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -1,16 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const servicios = [
-  "Asesoría Personal",
-  "Empresas y productos",
-  "Campañas Políticas",
-  "Identidad Gráfica",
-  "Capacitaciones",
-  "Asesoría por hora",
-  "Servicio a proveedores",
-];
-
 const navegacion = [
   { label: "Inicio", href: "/" },
   { label: "Sobre mi", href: "/sobre-mi" },
@@ -152,25 +142,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-5">
-            <h4 className="text-porcelain font-medium text-sm tracking-wide">
-              Servicios
-            </h4>
-            <ul className="flex flex-col gap-3">
-              {servicios.map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-porcelain/70 font-light text-sm transition-all ease-in-out duration-200 hover:text-goldenOrange"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 col-start-3">
             <h4 className="text-porcelain font-medium text-sm tracking-wide">
               Navegación
             </h4>
@@ -188,7 +160,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 col-start-4">
             <h4 className="text-porcelain font-medium text-sm tracking-wide">
               Contacto
             </h4>
