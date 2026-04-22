@@ -1,4 +1,6 @@
-import SectionText from "@/components/SectionText";
+"use client";
+
+import { FadeIn, FadeUp, RevealLine } from "@/components/motion";
 
 export default function HeroSection() {
   return (
@@ -9,23 +11,34 @@ export default function HeroSection() {
       }}
     >
       <div className="max-w-300 w-full flex flex-col items-center">
-        <p className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal">
-          Consultoría de imagen integral
-        </p>
-        <h1 className="text-charcoal text-[60px] font-medium text-center leading-[1.15] mt-4 max-w-200">
-          Tu imagen es tu mejor herramienta estratégica
+        <RevealLine delay={0}>
+          <p className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal">
+            Consultoría de imagen integral
+          </p>
+        </RevealLine>
+
+        <h1 className="text-charcoal text-[60px] font-medium text-center leading-[1.2] mt-4 max-w-200">
+          <RevealLine delay={0.08}>Tu imagen es tu mejor</RevealLine>
+          <RevealLine delay={0.16}>herramienta estratégica</RevealLine>
         </h1>
-        <p className="text-charcoal opacity-70 text-center text-base font-light mt-6 max-w-130">
+
+        <FadeUp
+          delay={0.28}
+          className="text-charcoal/70 text-center text-base font-light mt-6 max-w-130"
+        >
           Asesoría de imagen para profesionales, empresas y campañas políticas.
           Porque la imagen no es solo estética, es comunicación, presencia y
           estrategia.
-        </p>
+        </FadeUp>
 
-        <div className="w-full mt-14 rounded-[10px] overflow-hidden aspect-video">
+        <FadeIn
+          delay={0.4}
+          className="w-full mt-14 rounded-[10px] overflow-hidden aspect-video"
+        >
           <video className="w-full h-full object-cover" controls playsInline>
             <source src="/hero.mp4" type="video/mp4" />
           </video>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

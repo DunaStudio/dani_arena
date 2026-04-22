@@ -1,26 +1,29 @@
-import { url } from "inspector";
+import Icon01 from "@/public/icons/Briefcase.png";
+import Icon02 from "@/public/icons/RocketLaunch.png";
+import Icon03 from "@/public/icons/UsersThree.png";
+import Icon04 from "@/public/icons/CrownSimple.png";
 
 export const paraQuienCardsData = [
   {
-    number: "01",
+    icon: Icon01,
     title: "Personas que ordenan su imagen",
     description:
       "Querés trabajar tu imagen de forma consciente, alineada con quién sos y hacia dónde vas.",
   },
   {
-    number: "02",
+    icon: Icon02,
     title: "Mujeres y marca personal",
     description:
       "Desarrollás tu marca personal y necesitás que tu imagen acompañe tu crecimiento profesional.",
   },
   {
-    number: "03",
+    icon: Icon03,
     title: "Profesionales y líderes",
     description:
       "Necesitás fortalecer tu presencia, credibilidad y posicionamiento en entornos de alta exigencia.",
   },
   {
-    number: "04",
+    icon: Icon04,
     title: "Empresas y organizaciones",
     description:
       "Buscás alinear imagen, cultura y comunicación de equipos para generar coherencia de marca.",

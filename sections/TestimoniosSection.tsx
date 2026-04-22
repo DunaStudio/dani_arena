@@ -1,5 +1,7 @@
 "use client";
+import { RevealLine } from "@/components/motion";
 import SectionText from "@/components/SectionText";
+import TestimonioCard from "@/components/TestimoniosComponents/TestimonioCard";
 import { testimoniosCardsData } from "@/utils/constants";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
@@ -13,10 +15,15 @@ function ArrowButton({
   disabled: boolean;
   direction: "prev" | "next";
 }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <button
       onClick={onClick}
-      disabled={disabled}
+      disabled={mounted ? disabled : false}
       className="w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-200 shrink-0"
       style={{
         borderColor: disabled ? "#d1d1d1" : "#3a3a3a",
@@ -89,11 +96,19 @@ export default function TestimoniosSection() {
     <div className="bg-porcelain w-full flex items-center justify-center p-20">
       <div className="max-w-300 w-full flex flex-col justify-center items-start gap-12">
         <div className="w-full flex items-end justify-between">
-          <SectionText
-            label="Testimonios"
-            title={`Resultados de lo que \n logramos trabajando juntos`}
-            orientation="left"
-          />
+          <div>
+            <RevealLine
+              delay={0}
+              className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal"
+            >
+              Testimonios
+            </RevealLine>
+
+            <h2 className="text-charcoal text-[48px] font-medium text-left leading-[1.2] mt-4">
+              <RevealLine delay={0.08}>Resultados de lo que</RevealLine>
+              <RevealLine delay={0.16}>logramos trabajando juntos</RevealLine>
+            </h2>
+          </div>
           <div className="flex items-center gap-2 pb-1">
             <ArrowButton
               onClick={scrollPrev}
@@ -111,24 +126,12 @@ export default function TestimoniosSection() {
         <div className="w-full overflow-hidden" ref={emblaRef}>
           <div className="flex gap-4">
             {testimoniosCardsData.map((t, i) => (
-              <div
+              <TestimonioCard
                 key={i}
-                className="shrink-0 w-72 bg-white rounded-[5px] p-7 flex flex-col justify-between gap-10"
-                style={{ minHeight: "260px" }}
-              >
-                <p className="text-charcoal text-base leading-relaxed font-light">
-                  "{t.testimony}"
-                </p>
-
-                <div className="flex flex-col">
-                  <span className="font-semibold text-charcoal text-sm">
-                    {t.name}
-                  </span>
-                  <span className="text-charcoal opacity-60 text-xs">
-                    {t.position}
-                  </span>
-                </div>
-              </div>
+                testimony={t.testimony}
+                name={t.name}
+                position={t.position}
+              />
             ))}
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface SectionTextProps {
   label: string;
   title: string;
@@ -6,7 +8,7 @@ export interface SectionTextProps {
 }
 
 export interface ParaQuienCardProps {
-  number: string;
+  icon: StaticImageData;
   title: string;
   description: string;
 }

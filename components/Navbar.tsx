@@ -16,20 +16,14 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-white px-20 py-4 flex items-center justify-between sticky top-0 z-50 border-b border-porcelain">
       <Link href="/">
-        <Image
-          src="/logo.svg"
-          alt="Dani Arena"
-          width={90}
-          height={56}
-          quality={100}
-        />
+        <Image src="/logo.svg" alt="Dani Arena" width={90} height={56} />
       </Link>
-      <div className="flex items-center gap-9">
+      <div className="flex items-center gap-5 xl:gap-9">
         {links.map((link) => (
           <Link
             key={link.label}
             href={link.href}
-            className="text-charcoal text-sm font-normal hover:text-goldenOrange transition-colors"
+            className="text-charcoal text-sm font-light hover:text-goldenOrange transition-colors"
           >
             {link.label}
           </Link>
