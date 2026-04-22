@@ -71,45 +71,30 @@ const tabs: { key: TabKey; label: string }[] = [
   { key: "eventos", label: "Eventos" },
 ];
 
-function LogoItem({
-  name,
-  src,
-  index,
-}: {
-  name: string;
-  src: string;
-  index: number;
-}) {
+function MarqueeLogo({ name, src }: { name: string; src: string }) {
   return (
-    <div
-      className="flex items-center justify-center relative h-30 aspect-square"
-      style={{
-        opacity: 0,
-        animation: `logoIn 0.35s ease forwards`,
-        animationDelay: `${index * 35}ms`,
-      }}
-    >
+    <div className="flex items-center justify-center shrink-0 px-10 h-20">
       <Image
         src={src}
         alt={name}
-        fill
+        width={160}
+        height={80}
         quality={75}
-        className="max-h-50 max-w-full object-contain opacity-70 saturate-0 hover:opacity-100 transition-all duration-200 hover:saturate-100 scale-90 hover:scale-100"
-        onError={(e) => {
-          const img = e.target as HTMLImageElement;
-          img.style.display = "none";
-          const parent = img.parentElement;
-          if (parent && !parent.querySelector(".logo-fallback")) {
-            const fallback = document.createElement("span");
-            fallback.className =
-              "logo-fallback text-[#3a3a3a] font-semibold tracking-wide text-sm text-center";
-            fallback.style.fontFamily = "serif";
-            fallback.style.opacity = "0.75";
-            fallback.textContent = name;
-            parent.appendChild(fallback);
-          }
-        }}
+        className="object-contain opacity-70 md:saturate-0 hover:opacity-100 md:hover:saturate-100 transition-all duration-200 max-h-16 w-auto"
       />
+    </div>
+  );
+}
+
+function Marquee({ logos }: { logos: { name: string; src: string }[] }) {
+  const doubled = [...logos, ...logos];
+  return (
+    <div className="w-full overflow-hidden">
+      <div style={{ display: "flex", animation: "marquee 10s linear infinite" }}>
+        {doubled.map((logo, i) => (
+          <MarqueeLogo key={i} name={logo.name} src={logo.src} />
+        ))}
+      </div>
     </div>
   );
 }
@@ -157,9 +142,13 @@ export default function TrayectoriaSection() {
           from { opacity: 0; transform: translateY(12px); }
           to   { opacity: 1; transform: translateY(0); }
         }
+        @keyframes marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
       `}</style>
 
-      <div className="bg-porcelain w-full flex items-center justify-center py-24 px-8">
+      <div className="bg-porcelain w-full flex items-center justify-center py-12 px-6 md:py-24 md:px-8">
         <div className="max-w-4xl w-full flex flex-col items-center gap-12">
           <div className="w-full justify-center items-center">
             <RevealLine
@@ -169,7 +158,7 @@ export default function TrayectoriaSection() {
               Trayectoria
             </RevealLine>
 
-            <h2 className="text-charcoal text-[48px] font-medium text-center leading-[1.2] mt-4">
+            <h2 className="text-charcoal text-[34px] md:text-[48px] font-medium text-center leading-[1.2] mt-4">
               <RevealLine delay={0.08}>Experiencia que </RevealLine>
               <RevealLine delay={0.16}>respalda el trabajo</RevealLine>
             </h2>
@@ -260,18 +249,8 @@ export default function TrayectoriaSection() {
                 ))}
               </div>
             ) : (
-              <div
-                key={displayTab}
-                className="w-full flex flex-wrap justify-center gap-4"
-              >
-                {content.logos.map((logo, i) => (
-                  <LogoItem
-                    key={`${displayTab}-${i}`}
-                    name={logo.name}
-                    src={logo.src}
-                    index={i}
-                  />
-                ))}
+              <div key={displayTab} className="w-full">
+                <Marquee logos={content.logos} />
               </div>
             )}
           </div>
