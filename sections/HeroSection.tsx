@@ -37,10 +37,10 @@ export default function HeroSection() {
           className="w-full mt-14 rounded-[10px] overflow-hidden aspect-video"
         >
           <video
-            poster={videoPoster.src}
             className="w-full h-full object-cover"
             controls
             playsInline
+            preload="metadata"
           >
             <source
               src="https://res.cloudinary.com/djwaj0qea/video/upload/v1776882151/hero_qukk12.mp4"
