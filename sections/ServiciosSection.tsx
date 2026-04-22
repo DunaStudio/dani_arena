@@ -8,24 +8,23 @@ export default function ServiciosSection() {
         <div className="px-6 md:px-0">
           <RevealLine
             delay={0.06}
-            className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal"
+            className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal"
           >
             Servicios
           </RevealLine>
-          <h2 className="text-charcoal text-[34px] md:text-[48px] font-medium leading-[1.2] mt-4 max-w-200">
+          <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4 max-w-200">
             <RevealLine delay={0.12}>Soluciones de imagen </RevealLine>
             <RevealLine delay={0.18}>para cada necesidad</RevealLine>
           </h2>
         </div>
 
-        {/* Mobile carousel */}
-        <div className="md:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="md:hidden flex gap-4 mx-6 overflow-x-auto snap-x snap-mandatory px-6 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {servicios.map((servicio) => (
             <div
               key={servicio.title}
-              className="snap-start shrink-0 w-72 bg-white px-6 py-6 flex flex-col gap-4 rounded-[5px]"
+              className="snap-start shrink-0 w-72 bg-white p-4 lg:p-10 flex flex-col gap-4 rounded-[5px]"
             >
-              <p className="text-charcoal font-medium text-[20px]">
+              <p className="text-charcoal font-medium text-[16px] md:text-[20px]">
                 {servicio.title}
               </p>
               <p className="text-charcoal opacity-70 font-light text-sm flex-1 text-pretty">
@@ -35,18 +34,17 @@ export default function ServiciosSection() {
           ))}
         </div>
 
-        {/* Desktop grid */}
         <StaggerContainer
           staggerDelay={0.08}
           initialDelay={0.2}
-          className="hidden md:flex gap-5"
+          className="hidden md:grid grid-cols-3 grid-rows-2 lg:flex gap-5"
         >
           {servicios.map((servicio) => (
             <StaggerItem
               key={servicio.title}
-              className="flex-1 bg-white border-charcoal/15 px-6 py-6 flex flex-col gap-4 rounded-[5px]"
+              className="flex-1 bg-white p-6 flex flex-col gap-4 rounded-[5px]"
             >
-              <p className="text-charcoal font-medium text-[20px]">
+              <p className="text-charcoal font-medium text-[16px] md:text-[18px]">
                 {servicio.title}
               </p>
               <p className="text-charcoal opacity-70 font-light text-sm flex-1 text-pretty">

@@ -19,19 +19,18 @@ export default function SobreMiSection() {
       <div className="max-w-300 w-full flex flex-col md:flex-row items-center gap-10 md:gap-20">
         <div className="flex-1 flex flex-col">
           <RevealLine delay={0.06}>
-            <p className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal">
+            <p className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal">
               Sobre mí
             </p>
           </RevealLine>
 
-          <h2 className="text-charcoal text-[34px] md:text-[48px] font-medium leading-[1.2] mt-4">
-            {/* Mobile */}
+          <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4">
             <span className="md:hidden">
               <RevealLine delay={0.12}>Soy Dani Arena,</RevealLine>
               <RevealLine delay={0.16}>tu aliada en</RevealLine>
-              <RevealLine delay={0.20}>imagen estratégica</RevealLine>
+              <RevealLine delay={0.2}>imagen estratégica</RevealLine>
             </span>
-            {/* Desktop */}
+
             <span className="hidden md:block">
               <RevealLine delay={0.12}>Soy Dani Arena, tu aliada </RevealLine>
               <RevealLine delay={0.18}>en imagen estratégica</RevealLine>
@@ -40,7 +39,7 @@ export default function SobreMiSection() {
 
           <FadeUp
             delay={0.28}
-            className="text-charcoal opacity-70 font-light text-md mt-6"
+            className="text-charcoal opacity-70 font-light text-sm lg:text-md mt-6"
           >
             Mi misión es democratizar la asesoría de imagen. No es un lujo
             exclusivo ni algo solo para mujeres interesadas en moda. Es una
@@ -49,7 +48,7 @@ export default function SobreMiSection() {
           </FadeUp>
           <FadeUp
             delay={0.36}
-            className="text-charcoal opacity-70 font-light text-md mt-4"
+            className="text-charcoal opacity-70 font-light text-sm lg:text-md mt-4"
           >
             Trabajo con un enfoque estratégico donde cada decisión de imagen
             tiene un propósito claro: conectar, persuadir y posicionar.
@@ -67,7 +66,7 @@ export default function SobreMiSection() {
                       ✓
                     </span>
                   </div>
-                  <span className="text-charcoal/70 font-light text-md">
+                  <span className="text-charcoal font-light text-sm lg:text-md">
                     {item}
                   </span>
                 </li>

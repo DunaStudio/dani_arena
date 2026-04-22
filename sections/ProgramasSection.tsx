@@ -9,12 +9,12 @@ export default function ProgramasSection() {
       <div className="max-w-300 w-full flex flex-col justify-center items-start">
         <RevealLine
           delay={0}
-          className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal"
+          className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal"
         >
           Programas destacados
         </RevealLine>
 
-        <h2 className="text-charcoal text-[34px] md:text-[48px] font-medium text-left leading-[1.2] mt-4">
+        <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px]  font-medium text-left leading-[1.2] mt-4">
           <RevealLine delay={0.08}>Procesos de</RevealLine>
           <RevealLine delay={0.16}>transformación real</RevealLine>
         </h2>

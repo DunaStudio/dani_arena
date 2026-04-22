@@ -51,19 +51,19 @@ export default function QueHagoSection() {
         <div className="flex flex-col items-start gap-0">
           <RevealLine
             delay={0.06}
-            className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal"
+            className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal"
           >
             Que hago
           </RevealLine>
           <div className="flex flex-col md:grid md:grid-cols-2 gap-5">
-            <h2 className="text-charcoal text-[34px] md:text-[48px] font-medium leading-[1.2] mt-4">
+            <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4 text-pretty">
               <RevealLine delay={0.12}>La imagen como un</RevealLine>
               <RevealLine delay={0.18}>lenguaje completo</RevealLine>
             </h2>
             <div className="flex-1 flex flex-col gap-5 md:pt-2">
               <FadeUp
                 delay={0.28}
-                className="text-charcoal opacity-70 font-light text-base"
+                className="text-charcoal opacity-70 font-light text-sm lg:text-md"
               >
                 No se trata solo de cómo te vestís, sino de cómo comunicás, te
                 expresás y te posicionás. A través de un enfoque integral,
@@ -72,7 +72,7 @@ export default function QueHagoSection() {
               </FadeUp>
               <FadeUp
                 delay={0.36}
-                className="text-charcoal opacity-70 font-light text-base"
+                className="text-charcoal opacity-70 font-light text-sm lg:text-md"
               >
                 También trabajo con empresas, integrando la imagen personal de
                 líderes y equipos con la identidad de marca. El resultado es una
@@ -91,12 +91,12 @@ export default function QueHagoSection() {
           {cards.map((card) => (
             <StaggerItem
               key={card.number}
-              className="bg-porcelain rounded-[10px] p-6 md:p-10 flex flex-col gap-4 md:gap-5"
+              className="bg-porcelain rounded-[10px] p-6 lg:p-10 flex flex-col gap-4 md:gap-5"
             >
               <p className="text-charcoal opacity-30 font-light text-base">
                 {card.number}
               </p>
-              <p className="text-charcoal font-medium text-[20px]">
+              <p className="text-charcoal font-medium  text-[16px] lg:text-[20px]">
                 {card.title}
               </p>
               <p className="text-charcoal opacity-70 font-light text-sm">

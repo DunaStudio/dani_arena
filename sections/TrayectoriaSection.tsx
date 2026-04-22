@@ -90,7 +90,9 @@ function Marquee({ logos }: { logos: { name: string; src: string }[] }) {
   const doubled = [...logos, ...logos];
   return (
     <div className="w-full overflow-hidden">
-      <div style={{ display: "flex", animation: "marquee 10s linear infinite" }}>
+      <div
+        style={{ display: "flex", animation: "marquee 10s linear infinite" }}
+      >
         {doubled.map((logo, i) => (
           <MarqueeLogo key={i} name={logo.name} src={logo.src} />
         ))}
@@ -153,12 +155,12 @@ export default function TrayectoriaSection() {
           <div className="w-full justify-center items-center">
             <RevealLine
               delay={0}
-              className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal text-center"
+              className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal text-center"
             >
               Trayectoria
             </RevealLine>
 
-            <h2 className="text-charcoal text-[34px] md:text-[48px] font-medium text-center leading-[1.2] mt-4">
+            <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium text-center leading-[1.2] mt-4">
               <RevealLine delay={0.08}>Experiencia que </RevealLine>
               <RevealLine delay={0.16}>respalda el trabajo</RevealLine>
             </h2>

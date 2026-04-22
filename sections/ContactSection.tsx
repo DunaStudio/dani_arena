@@ -7,12 +7,12 @@ export default function ContactSection() {
         <div className="w-full md:max-w-200 flex flex-col justify-center items-center">
           <RevealLine
             delay={0.06}
-            className="text-goldenOrange uppercase font-400 tracking-[0.25em] text-sm text-center"
+            className="text-goldenOrange uppercase font-400 tracking-[0.25em] text-xs lg:text-sm text-center"
           >
             Empecemos
           </RevealLine>
 
-          <h2 className="text-charcoal font-medium text-[32px] md:text-[48px] text-center whitespace-pre-line mt-4 text-pretty">
+          <h2 className="text-charcoal font-medium text-[28px] md:text-[36px] xl:text-[48px] text-center whitespace-pre-line mt-4 text-pretty">
             <RevealLine delay={0.12}>Tu imagen ya está comunicando.</RevealLine>
             <br />
             <RevealLine delay={0.2} className="font-light">
@@ -29,9 +29,12 @@ export default function ContactSection() {
           </FadeUp>
         </div>
 
-        <FadeUp delay={0.42} className="w-full md:w-auto flex flex-col md:flex-row justify-center items-center gap-4 mt-12">
+        <FadeUp
+          delay={0.42}
+          className="w-full md:w-auto flex flex-col md:flex-row justify-center items-center gap-4 mt-12"
+        >
           <a
-            className="bg-charcoal text-white rounded-full py-5 px-10 hover:bg-goldenOrange transition-colors w-full md:w-max text-center text-sm"
+            className="bg-charcoal text-white rounded-full py-4 px-5 lg:py-5 lg:px-10 hover:bg-goldenOrange transition-colors w-full md:w-max text-center text-sm"
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -40,7 +43,7 @@ export default function ContactSection() {
           </a>
 
           <a
-            className="bg-[#25D366] text-charcoal rounded-full py-5 px-10 hover:bg-goldenOrange transition-colors w-full md:w-max text-center text-sm"
+            className="bg-[#25D366] text-charcoal rounded-full py-4 px-5 lg:py-5 lg:px-10 hover:bg-goldenOrange transition-colors w-full md:w-max text-center text-sm"
             href="#"
             target="_blank"
             rel="noopener noreferrer"

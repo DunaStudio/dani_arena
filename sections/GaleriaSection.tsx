@@ -28,33 +28,27 @@ interface GalleryImage {
   alt: string;
 }
 
-// ─── Data ────────────────────────────────────────────────────────────────────
-// Replace each array entry with your actual images.
-// Single-element arrays = static image. Multiple = carousel.
-
 const CELLS: GalleryImage[][] = [
-  // Row 1
-  [{ src: Imagen, alt: "Imagen 1" }], // col-span-2
+  [{ src: Imagen, alt: "Imagen 1" }],
   [
     { src: ImagenAfrica1, alt: "Imagen 2a" },
     { src: ImagenAfrica2, alt: "Imagen 2b" },
     { src: ImagenAfrica3, alt: "Imagen 2c" },
     { src: ImagenAfrica4, alt: "Imagen 2d" },
-  ], // col-span-4 → carousel
-  [{ src: Imagen, alt: "Imagen 3" }], // col-span-3
+  ],
+  [{ src: Imagen, alt: "Imagen 3" }],
   [
     { src: ImagenMarfilia1, alt: "Imagen 4a" },
     { src: ImagenMarfilia2, alt: "Imagen 4b" },
-  ], // col-span-3 → carousel
-  // Row 2
-  [{ src: Imagen, alt: "Imagen 5" }], // col-span-3
+  ],
+  [{ src: Imagen, alt: "Imagen 5" }],
   [
     { src: ImagenVinoteca1, alt: "Imagen 6a" },
     { src: ImagenVinoteca2, alt: "Imagen 6b" },
     { src: ImagenVinoteca3, alt: "Imagen 6c" },
-  ], // col-span-2 → carousel
-  [{ src: Imagen, alt: "Imagen 7" }], // col-span-5
-  [{ src: Imagen, alt: "Imagen 8" }], // col-span-2
+  ],
+  [{ src: Imagen, alt: "Imagen 7" }],
+  [{ src: Imagen, alt: "Imagen 8" }],
 ];
 
 const CELL_CLASSES = [
@@ -70,7 +64,16 @@ const CELL_CLASSES = [
   "col-span-2 col-start-11 row-start-2",
 ];
 
-// ─── Carousel Cell ───────────────────────────────────────────────────────────
+const CELL_CLASES_MOBILE = [
+  "col-span-2",
+  "col-span-4 col-start-3",
+  "col-span-3 row-start-2",
+  "col-span-3 col-start-4 row-start-2",
+  "col-span-6 row-start-3",
+  "col-span-4 row-start-4",
+  "col-span-2 col-start-5 row-start-4",
+  "col-span-6 row-start-5",
+];
 
 interface CarouselCellProps {
   images: GalleryImage[];
@@ -222,8 +225,6 @@ function CarouselCell({
   );
 }
 
-// ─── Lightbox ────────────────────────────────────────────────────────────────
-
 interface LightboxProps {
   src: ImageSrc | null;
   alt: string;
@@ -251,7 +252,6 @@ function Lightbox({ src, alt, onClose }: LightboxProps) {
       }}
       onClick={onClose}
     >
-      {/* Close button */}
       <button
         onClick={onClose}
         className="absolute top-5 right-6 text-white/70 hover:text-white transition-colors z-10"
@@ -273,7 +273,6 @@ function Lightbox({ src, alt, onClose }: LightboxProps) {
         </svg>
       </button>
 
-      {/* Image container */}
       <div
         className="relative"
         style={{
@@ -297,8 +296,6 @@ function Lightbox({ src, alt, onClose }: LightboxProps) {
   );
 }
 
-// ─── Main Component ──────────────────────────────────────────────────────────
-
 export default function GaleriaSection() {
   const [lightbox, setLightbox] = useState<{
     src: ImageSrc;
@@ -313,16 +310,16 @@ export default function GaleriaSection() {
 
   return (
     <>
-      <div className="bg-porcelain w-full flex items-center justify-center p-20">
+      <div className="bg-porcelain w-full flex items-center justify-center p-6 md:p-20">
         <div className="max-w-300 w-full flex flex-col justify-center items-start">
           <RevealLine
             delay={0}
-            className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal"
+            className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal"
           >
             Galería
           </RevealLine>
 
-          <h2 className="text-charcoal text-[48px] font-medium text-left leading-[1.2] mt-4">
+          <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium text-left leading-[1.2] mt-4">
             <RevealLine delay={0.08}>Registros que</RevealLine>
             <RevealLine delay={0.16}>capturan mi trabajo</RevealLine>
           </h2>
@@ -330,7 +327,25 @@ export default function GaleriaSection() {
           <StaggerContainer
             staggerDelay={0.08}
             initialDelay={0.2}
-            className="grid grid-cols-12 grid-rows-2 gap-4 w-full mt-5"
+            className="grid grid-cols-6 grid-rows-5 gap-5 w-full mt-5 md:hidden"
+          >
+            {CELLS.map((images, i) => (
+              <StaggerItem key={i} className={CELL_CLASES_MOBILE[i]}>
+                <CarouselCell
+                  key={i}
+                  images={images}
+                  className=""
+                  onOpen={openLightbox}
+                  intervalMs={3000 + i * 400}
+                />
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <StaggerContainer
+            staggerDelay={0.08}
+            initialDelay={0.2}
+            className="grid-cols-12 grid-rows-2 gap-4 w-full mt-5 hidden md:grid"
           >
             {CELLS.map((images, i) => (
               <StaggerItem key={i} className={CELL_CLASSES[i]}>

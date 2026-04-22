@@ -22,7 +22,11 @@ export default function ParaQuienSection() {
   };
 
   const scrollToCard = (i: number) => {
-    scrollRef.current?.children[i]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+    scrollRef.current?.children[i]?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
     setCurrent(i);
   };
 
@@ -30,25 +34,24 @@ export default function ParaQuienSection() {
     <div className="bg-porcelain w-full flex items-center justify-center px-6 md:px-20 py-12 md:py-5">
       <div className="max-w-300 w-full flex flex-col justify-center items-center">
         <RevealLine delay={0}>
-          <p className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal">
+          <p className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal">
             Para quién
           </p>
         </RevealLine>
 
-        <h2 className="text-charcoal text-[34px] md:text-[48px] font-medium text-center leading-[1.2] mt-4">
+        <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px]  font-medium text-center leading-[1.2] mt-4">
           <RevealLine delay={0.08}>Trabajando con personas que</RevealLine>
           <RevealLine delay={0.16}>buscan más que verse bien</RevealLine>
         </h2>
 
         <FadeUp
           delay={0.28}
-          className="text-charcoal/70 text-center text-base font-light mt-6 max-w-130"
+          className="text-charcoal/70 text-center text-xs lg:text-base font-light mt-6 max-w-130"
         >
           Mi enfoque está en profesionales y organizaciones que entienden que la
           imagen es una inversión estratégica. No es vanidad — es visibilidad.
         </FadeUp>
 
-        {/* Mobile carousel */}
         <div className="md:hidden w-full mt-10">
           <div
             ref={scrollRef}
@@ -61,15 +64,22 @@ export default function ParaQuienSection() {
                 className="snap-start shrink-0 w-[82%] bg-white rounded-[5px] p-5 flex flex-col gap-4"
               >
                 <div className="rounded-full bg-porcelain p-3 w-max">
-                  <img src={card.icon.src} alt="" className="w-7 h-7 object-contain" />
+                  <img
+                    src={card.icon.src}
+                    alt=""
+                    className="w-7 h-7 object-contain"
+                  />
                 </div>
-                <p className="font-medium text-charcoal text-[16px]">{card.title}</p>
-                <p className="text-charcoal opacity-70 font-light text-[14px]">{card.description}</p>
+                <p className="font-medium text-charcoal text-[16px]">
+                  {card.title}
+                </p>
+                <p className="text-charcoal opacity-70 font-light text-[14px]">
+                  {card.description}
+                </p>
               </div>
             ))}
           </div>
 
-          {/* Dots */}
           <div className="flex justify-center gap-2 mt-5">
             {paraQuienCardsData.map((_, i) => (
               <button
@@ -81,7 +91,6 @@ export default function ParaQuienSection() {
           </div>
         </div>
 
-        {/* Desktop grid */}
         <StaggerContainer className="hidden md:grid grid-cols-4 gap-5 mt-15 w-full">
           {paraQuienCardsData.map((card, i) => (
             <StaggerItem key={i} className="h-full flex">
