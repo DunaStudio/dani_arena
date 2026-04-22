@@ -5,6 +5,7 @@ import { FadeIn, FadeUp, RevealLine } from "@/components/motion";
 export default function HeroSection() {
   return (
     <section
+      id="inicio"
       className="w-full flex flex-col items-center justify-center px-6 md:px-20 pt-12 md:pt-20 pb-0"
       style={{
         background: "linear-gradient(to bottom, white 72%, #fbf9f6 72%)",

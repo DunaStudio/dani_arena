@@ -3,7 +3,10 @@ import { servicios } from "@/utils/constants";
 
 export default function ServiciosSection() {
   return (
-    <section className="w-full bg-porcelain flex justify-center py-12 md:py-20 md:px-20">
+    <section
+      id="servicios"
+      className="w-full bg-porcelain flex justify-center py-12 md:py-20 md:px-20"
+    >
       <div className="max-w-300 w-full flex flex-col gap-10 md:gap-15">
         <div className="px-6 md:px-0">
           <RevealLine

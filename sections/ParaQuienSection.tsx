@@ -31,7 +31,10 @@ export default function ParaQuienSection() {
   };
 
   return (
-    <div className="bg-porcelain w-full flex items-center justify-center px-6 md:px-20 py-12 md:py-5">
+    <section
+      id="para-quien"
+      className="bg-porcelain w-full flex items-center justify-center px-6 md:px-20 py-12 md:py-5"
+    >
       <div className="max-w-300 w-full flex flex-col justify-center items-center">
         <RevealLine delay={0}>
           <p className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal">
@@ -103,6 +106,6 @@ export default function ParaQuienSection() {
           ))}
         </StaggerContainer>
       </div>
-    </div>
+    </section>
   );
 }

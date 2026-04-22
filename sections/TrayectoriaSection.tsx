@@ -150,7 +150,10 @@ export default function TrayectoriaSection() {
         }
       `}</style>
 
-      <div className="bg-porcelain w-full flex items-center justify-center py-12 px-6 md:py-24 md:px-8">
+      <section
+        id="trayectoria"
+        className="bg-porcelain w-full flex items-center justify-center py-12 px-6 md:py-24 md:px-8"
+      >
         <div className="max-w-4xl w-full flex flex-col items-center gap-12">
           <div className="w-full justify-center items-center">
             <RevealLine
@@ -257,7 +260,7 @@ export default function TrayectoriaSection() {
             )}
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

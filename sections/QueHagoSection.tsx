@@ -46,7 +46,10 @@ const cards = [
 
 export default function QueHagoSection() {
   return (
-    <section className="w-full bg-white flex justify-center px-6 md:px-20 py-12 md:py-20">
+    <section
+      id="que-hago"
+      className="w-full bg-white flex justify-center px-6 md:px-20 py-12 md:py-20"
+    >
       <div className="max-w-300 w-full flex flex-col gap-10 md:gap-15">
         <div className="flex flex-col items-start gap-0">
           <RevealLine

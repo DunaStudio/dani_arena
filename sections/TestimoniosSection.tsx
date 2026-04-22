@@ -93,7 +93,10 @@ export default function TestimoniosSection() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="bg-porcelain w-full flex items-center justify-center px-6 md:px-20 py-12 md:py-20">
+    <section
+      id="testimonios"
+      className="bg-porcelain w-full flex items-center justify-center px-6 md:px-20 py-12 md:py-20"
+    >
       <div className="max-w-300 w-full flex flex-col justify-center items-start gap-10 md:gap-12">
         <div className="w-full flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-0">
           <div>
@@ -136,6 +139,6 @@ export default function TestimoniosSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

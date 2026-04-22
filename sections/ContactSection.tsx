@@ -2,7 +2,10 @@ import { RevealLine, FadeUp } from "@/components/motion";
 
 export default function ContactSection() {
   return (
-    <div className="bg-white w-full flex items-center justify-center px-6 md:px-20 py-16 md:py-20">
+    <section
+      id="contacto"
+      className="bg-white w-full flex items-center justify-center px-6 md:px-20 py-16 md:py-20"
+    >
       <div className="max-w-300 w-full flex flex-col justify-center items-center">
         <div className="w-full md:max-w-200 flex flex-col justify-center items-center">
           <RevealLine
@@ -52,6 +55,6 @@ export default function ContactSection() {
           </a>
         </FadeUp>
       </div>
-    </div>
+    </section>
   );
 }

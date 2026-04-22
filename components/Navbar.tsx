@@ -5,15 +5,27 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const links = [
-  { label: "Inicio", href: "#" },
-  { label: "Sobre mí", href: "#" },
-  { label: "Que hago?", href: "#" },
-  { label: "Servicios", href: "#" },
-  { label: "Para quién?", href: "#" },
-  { label: "Programas", href: "#" },
-  { label: "Testimonios", href: "#" },
-  { label: "Trayectoria", href: "#" },
+  { label: "Inicio", href: "#inicio" },
+  { label: "Sobre mí", href: "#sobre-mi" },
+  { label: "Que hago?", href: "#que-hago" },
+  { label: "Servicios", href: "#servicios" },
+  { label: "Para quién?", href: "#para-quien" },
+  { label: "Programas", href: "#programas" },
+  { label: "Testimonios", href: "#testimonios" },
+  { label: "Trayectoria", href: "#trayectoria" },
 ];
+
+function scrollTo(href: string) {
+  const id = href.replace("#", "");
+  const el = document.getElementById(id);
+  const navbar = document.querySelector("nav");
+  if (!el) return;
+
+  const navbarHeight = navbar?.offsetHeight ?? 0;
+  const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+  window.scrollTo({ top, behavior: "smooth" });
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -34,18 +46,26 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-3 xl:gap-9">
           {links.map((link) => (
-            <Link
+            <a
               key={link.label}
               href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo(link.href);
+              }}
               className="text-charcoal text-xs xl:text-sm font-light hover:text-goldenOrange transition-colors"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </div>
 
         <a
           href="#contacto"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo("#contacto");
+          }}
           className="hidden lg:block bg-charcoal text-white text-sm rounded-full py-3 px-7 hover:bg-goldenOrange transition-colors whitespace-nowrap"
         >
           Contacto
@@ -73,18 +93,26 @@ export default function Navbar() {
       >
         <div className="flex flex-col px-6 gap-1">
           {links.map((link) => (
-            <Link
+            <a
               key={link.label}
               href={link.href}
-              onClick={() => setOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                setOpen(false);
+                setTimeout(() => scrollTo(link.href), 300);
+              }}
               className="text-charcoal text-base font-light py-3 border-b border-porcelain/60 hover:text-goldenOrange transition-colors"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
           <a
             href="#contacto"
-            onClick={() => setOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              setOpen(false);
+              setTimeout(() => scrollTo("#contacto"), 300);
+            }}
             className="mt-4 bg-charcoal text-white text-sm rounded-full py-4 px-7 hover:bg-goldenOrange transition-colors text-center"
           >
             Contacto

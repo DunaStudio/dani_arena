@@ -15,7 +15,10 @@ const checkItems = [
 
 export default function SobreMiSection() {
   return (
-    <section className="w-full bg-porcelain flex justify-center px-6 md:px-20 pt-12 md:pt-20 pb-10 md:pb-16">
+    <section
+      id="sobre-mi"
+      className="w-full bg-porcelain flex justify-center px-6 md:px-20 pt-12 md:pt-20 pb-10 md:pb-16"
+    >
       <div className="max-w-300 w-full flex flex-col md:flex-row items-center gap-10 md:gap-20">
         <div className="flex-1 flex flex-col">
           <RevealLine delay={0.06}>
