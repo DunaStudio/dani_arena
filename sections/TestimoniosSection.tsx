@@ -93,9 +93,9 @@ export default function TestimoniosSection() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="bg-porcelain w-full flex items-center justify-center p-20">
-      <div className="max-w-300 w-full flex flex-col justify-center items-start gap-12">
-        <div className="w-full flex items-end justify-between">
+    <div className="bg-porcelain w-full flex items-center justify-center px-6 md:px-20 py-12 md:py-20">
+      <div className="max-w-300 w-full flex flex-col justify-center items-start gap-10 md:gap-12">
+        <div className="w-full flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-0">
           <div>
             <RevealLine
               delay={0}
@@ -104,12 +104,12 @@ export default function TestimoniosSection() {
               Testimonios
             </RevealLine>
 
-            <h2 className="text-charcoal text-[48px] font-medium text-left leading-[1.2] mt-4">
+            <h2 className="text-charcoal text-[34px] md:text-[48px] font-medium text-left leading-[1.2] mt-4">
               <RevealLine delay={0.08}>Resultados de lo que</RevealLine>
               <RevealLine delay={0.16}>logramos trabajando juntos</RevealLine>
             </h2>
           </div>
-          <div className="flex items-center gap-2 pb-1">
+          <div className="flex items-center gap-2">
             <ArrowButton
               onClick={scrollPrev}
               disabled={prevDisabled}
