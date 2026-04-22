@@ -1,5 +1,4 @@
 "use client";
-import videoPoster from "@/public/images/heroVideoImg.png";
 import { FadeIn, FadeUp, RevealLine } from "@/components/motion";
 
 export default function HeroSection() {
