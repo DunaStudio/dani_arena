@@ -15,8 +15,8 @@ const checkItems = [
 
 export default function SobreMiSection() {
   return (
-    <section className="w-full bg-porcelain flex justify-center px-20 pt-20 pb-16">
-      <div className="max-w-300 w-full flex items-center gap-20">
+    <section className="w-full bg-porcelain flex justify-center px-6 md:px-20 pt-12 md:pt-20 pb-10 md:pb-16">
+      <div className="max-w-300 w-full flex flex-col md:flex-row items-center gap-10 md:gap-20">
         <div className="flex-1 flex flex-col">
           <RevealLine delay={0.06}>
             <p className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal">
@@ -24,9 +24,18 @@ export default function SobreMiSection() {
             </p>
           </RevealLine>
 
-          <h2 className="text-charcoal text-[48px] font-medium leading-[1.2] mt-4">
-            <RevealLine delay={0.12}>Soy Dani Arena, tu aliada </RevealLine>
-            <RevealLine delay={0.18}>en imagen estratégica</RevealLine>
+          <h2 className="text-charcoal text-[34px] md:text-[48px] font-medium leading-[1.2] mt-4">
+            {/* Mobile */}
+            <span className="md:hidden">
+              <RevealLine delay={0.12}>Soy Dani Arena,</RevealLine>
+              <RevealLine delay={0.16}>tu aliada en</RevealLine>
+              <RevealLine delay={0.20}>imagen estratégica</RevealLine>
+            </span>
+            {/* Desktop */}
+            <span className="hidden md:block">
+              <RevealLine delay={0.12}>Soy Dani Arena, tu aliada </RevealLine>
+              <RevealLine delay={0.18}>en imagen estratégica</RevealLine>
+            </span>
           </h2>
 
           <FadeUp
@@ -67,7 +76,7 @@ export default function SobreMiSection() {
           </StaggerContainer>
         </div>
 
-        <div className="relative w-115 h-145 shrink-0">
+        <div className="relative w-full md:w-115 h-96 md:h-145 shrink-0">
           <div className="absolute inset-0 top-[10%] rounded-[10px] overflow-hidden">
             <Image
               src="/images/SobreMi/FondoSobreMi.png"
@@ -76,7 +85,7 @@ export default function SobreMiSection() {
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-16 left-0 right-0 h-[135%]">
+          <div className="absolute bottom-0 md:-bottom-16 left-0 right-0 h-[115%] md:h-[135%]">
             <Image
               src="/images/SobreMi/SobreMi.png"
               alt="Dani Arena"
