@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useLayoutEffect } from "react";
-import SectionText from "@/components/SectionText";
 import Image from "next/image";
 import logo1 from "@/public/images/EmpresasLogos/logo1.png";
 import logo2 from "@/public/images/EmpresasLogos/logo2.png";
@@ -10,6 +9,7 @@ import logo4 from "@/public/images/EmpresasLogos/logo4.png";
 import logo5 from "@/public/images/EmpresasLogos/logo5.png";
 import logo6 from "@/public/images/EmpresasLogos/logo6.png";
 import logo7 from "@/public/images/EmpresasLogos/logo7.png";
+import { FadeIn, RevealLine } from "@/components/motion";
 
 type TabKey = "empresas" | "formacion" | "medios" | "eventos";
 
@@ -166,13 +166,21 @@ export default function TrayectoriaSection() {
 
       <div className="bg-porcelain w-full flex items-center justify-center py-24 px-8">
         <div className="max-w-4xl w-full flex flex-col items-center gap-12">
-          <SectionText
-            label="Trayectoria"
-            title={`Experiencia que \n respalda el trabajo`}
-            orientation="center"
-          />
+          <div className="w-full justify-center items-center">
+            <RevealLine
+              delay={0}
+              className="text-goldenOrange uppercase tracking-[0.25em] text-sm font-normal text-center"
+            >
+              Trayectoria
+            </RevealLine>
 
-          <div className="w-full">
+            <h2 className="text-charcoal text-[48px] font-medium text-center leading-[1.2] mt-4">
+              <RevealLine delay={0.08}>Experiencia que </RevealLine>
+              <RevealLine delay={0.16}>respalda el trabajo</RevealLine>
+            </h2>
+          </div>
+
+          <FadeIn className="w-full">
             <div
               ref={containerRef}
               className="relative flex items-center w-full border-b border-charcoal/20"
@@ -211,7 +219,7 @@ export default function TrayectoriaSection() {
                 }}
               />
             </div>
-          </div>
+          </FadeIn>
 
           <div
             style={{

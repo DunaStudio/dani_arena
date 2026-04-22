@@ -6,10 +6,18 @@ export default function TestimonioCard({
   testimony,
 }: TestimonioCardProps) {
   return (
-    <div>
-      <p>{name}</p>
-      <p>{position}</p>
-      <p>{testimony}</p>
+    <div
+      className="shrink-0 w-72 bg-white rounded-[5px] p-7 flex flex-col justify-between gap-10"
+      style={{ minHeight: "260px" }}
+    >
+      <p className="text-charcoal text-base leading-relaxed font-light">
+        "{testimony}"
+      </p>
+
+      <div className="flex flex-col">
+        <span className="font-semibold text-charcoal text-sm">{name}</span>
+        <span className="text-charcoal opacity-60 text-xs">{position}</span>
+      </div>
     </div>
   );
 }

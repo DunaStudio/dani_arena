@@ -17,7 +17,7 @@ export default function ProgramaCard({
         <p className="text-charcoal font-light text-[16px] mt-2">{text}</p>
       </div>
       <a
-        className="bg-charcoal text-white rounded-full py-5 px-10 hover:bg-goldenOrange transition-colors w-max mt-12.5"
+        className="bg-charcoal text-white rounded-full py-5 px-10 hover:bg-goldenOrange transition-colors w-max mt-12.5 text-sm"
         href={url}
         target="_blank"
         rel="noopener noreferrer"

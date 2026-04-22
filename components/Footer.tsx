@@ -1,5 +1,4 @@
 import Link from "next/link";
-import logo from "@/public/logo2.svg";
 import Image from "next/image";
 
 const servicios = [
@@ -110,15 +109,12 @@ function LinkedinIcon() {
 
 export default function Footer() {
   return (
-    <footer className="w-full flex justify-center px-8 py-16 bg-charcoal">
-      <div className="max-w-300 w-full flex flex-col gap-12">
-        {/* Main grid */}
+    <footer className="w-full flex justify-center px-20 py-16 bg-charcoal">
+      <div className="max-w-300 w-full flex flex-col gap-12 ">
         <div className="grid grid-cols-4 gap-12 items-start">
-          {/* Col 1 — Brand */}
           <div className="flex flex-col gap-6">
-            {/* Logo — replace with your <img> */}
             <Image
-              src={logo}
+              src="/logo2.svg"
               alt="Dani Arena"
               width={90}
               height={56}
