@@ -1,5 +1,5 @@
 "use client";
-
+import videoPoster from "@/public/images/heroVideoImg.png";
 import { FadeIn, FadeUp, RevealLine } from "@/components/motion";
 
 export default function HeroSection() {
@@ -36,7 +36,12 @@ export default function HeroSection() {
           delay={0.4}
           className="w-full mt-14 rounded-[10px] overflow-hidden aspect-video"
         >
-          <video className="w-full h-full object-cover" controls playsInline>
+          <video
+            poster={videoPoster.src}
+            className="w-full h-full object-cover"
+            controls
+            playsInline
+          >
             <source
               src="https://res.cloudinary.com/djwaj0qea/video/upload/v1776882151/hero_qukk12.mp4"
               type="video/mp4"

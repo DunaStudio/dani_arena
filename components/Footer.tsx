@@ -84,7 +84,7 @@ export default function Footer() {
     <footer className="w-full bg-charcoal">
       <div className="md:hidden flex flex-col items-center gap-8 px-6 py-12">
         <Image
-          src="/logo2.svg"
+          src="/logo2.png"
           alt="Dani Arena"
           width={90}
           height={56}
