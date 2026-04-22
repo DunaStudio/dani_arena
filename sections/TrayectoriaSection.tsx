@@ -17,6 +17,9 @@ import medio04 from "@/public/images/MediosLogos/radioLaVoz.png";
 import medio05 from "@/public/images/MediosLogos/teLoTengoQueDecir.png";
 import medio06 from "@/public/images/MediosLogos/yoTeInvito.png";
 
+import portadaVideo1 from "@/public/images/portada-evento-porota.png";
+import portadaVideo2 from "@/public/images/portada-evento-sushi.png";
+
 import { FadeIn, RevealLine } from "@/components/motion";
 
 type TabKey = "empresas" | "medios" | "eventos";
@@ -24,7 +27,7 @@ type TabKey = "empresas" | "medios" | "eventos";
 interface TabContent {
   description: string;
   logos: { name: string; src: string }[];
-  videos?: { src: string; title?: string }[];
+  videos?: { src: string; title?: string; poster?: string }[];
 }
 
 const tabsData: Record<TabKey, TabContent> = {
@@ -59,8 +62,16 @@ const tabsData: Record<TabKey, TabContent> = {
       "Participé como oradora y consultora en eventos, conferencias y encuentros del mundo corporativo y creativo.",
     logos: [],
     videos: [
-      { src: "/reel-porota.mp4", title: "Evento Porota" },
-      { src: "/reel-sushi-club.mp4", title: "Evento Sushi Club" },
+      {
+        src: "/reel-porota.mp4",
+        title: "Evento Porota",
+        poster: portadaVideo1.src,
+      },
+      {
+        src: "/reel-sushi-club.mp4",
+        title: "Evento Sushi Club",
+        poster: portadaVideo2.src,
+      },
     ],
   },
 };
@@ -73,12 +84,12 @@ const tabs: { key: TabKey; label: string }[] = [
 
 function MarqueeLogo({ name, src }: { name: string; src: string }) {
   return (
-    <div className="flex items-center justify-center shrink-0 px-10 h-20">
+    <div className="flex items-center justify-center shrink-0 px-5 h-25">
       <Image
         src={src}
         alt={name}
         width={160}
-        height={80}
+        height={100}
         quality={75}
         className="object-contain opacity-70 md:saturate-0 hover:opacity-100 md:hover:saturate-100 transition-all duration-200 max-h-16 w-auto"
       />
@@ -87,12 +98,35 @@ function MarqueeLogo({ name, src }: { name: string; src: string }) {
 }
 
 function Marquee({ logos }: { logos: { name: string; src: string }[] }) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const xRef = useRef(0);
+  const rafRef = useRef<number>(0);
+  const SPEED = 0.5;
+
+  useLayoutEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const halfWidth = track.scrollWidth / 2;
+
+    const tick = () => {
+      xRef.current -= SPEED;
+      if (Math.abs(xRef.current) >= halfWidth) {
+        xRef.current = 0;
+      }
+      track.style.transform = `translateX(${xRef.current}px)`;
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [logos]);
+
   const doubled = [...logos, ...logos];
+
   return (
     <div className="w-full overflow-hidden">
-      <div
-        style={{ display: "flex", animation: "marquee 10s linear infinite" }}
-      >
+      <div ref={trackRef} style={{ display: "flex", willChange: "transform" }}>
         {doubled.map((logo, i) => (
           <MarqueeLogo key={i} name={logo.name} src={logo.src} />
         ))}
@@ -246,8 +280,10 @@ export default function TrayectoriaSection() {
                     <video
                       src={video.src}
                       title={video.title}
+                      poster={video.poster}
                       controls
                       playsInline
+                      preload="none"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>

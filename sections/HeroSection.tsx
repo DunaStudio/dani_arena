@@ -37,7 +37,10 @@ export default function HeroSection() {
           className="w-full mt-14 rounded-[10px] overflow-hidden aspect-video"
         >
           <video className="w-full h-full object-cover" controls playsInline>
-            <source src="/hero.mp4" type="video/mp4" />
+            <source
+              src="https://res.cloudinary.com/djwaj0qea/video/upload/v1776882151/hero_qukk12.mp4"
+              type="video/mp4"
+            />
           </video>
         </FadeIn>
       </div>
