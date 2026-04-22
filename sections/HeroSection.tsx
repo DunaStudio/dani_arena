@@ -5,7 +5,7 @@ import { FadeIn, FadeUp, RevealLine } from "@/components/motion";
 export default function HeroSection() {
   return (
     <section
-      className="w-full flex flex-col items-center justify-center px-20 pt-20 pb-0"
+      className="w-full flex flex-col items-center justify-center px-6 md:px-20 pt-12 md:pt-20 pb-0"
       style={{
         background: "linear-gradient(to bottom, white 72%, #fbf9f6 72%)",
       }}
@@ -17,14 +17,14 @@ export default function HeroSection() {
           </p>
         </RevealLine>
 
-        <h1 className="text-charcoal text-[60px] font-medium text-center leading-[1.2] mt-4 max-w-200">
+        <h1 className="text-charcoal text-[38px] md:text-[60px] font-medium text-center leading-[1.2] mt-4 max-w-200">
           <RevealLine delay={0.08}>Tu imagen es tu mejor</RevealLine>
           <RevealLine delay={0.16}>herramienta estratégica</RevealLine>
         </h1>
 
         <FadeUp
           delay={0.28}
-          className="text-charcoal/70 text-center text-base font-light mt-6 max-w-130"
+          className="text-charcoal/70 text-center text-sm md:text-base font-light mt-6 max-w-130"
         >
           Asesoría de imagen para profesionales, empresas y campañas políticas.
           Porque la imagen no es solo estética, es comunicación, presencia y
