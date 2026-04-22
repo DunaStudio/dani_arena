@@ -217,7 +217,7 @@ export default function TrayectoriaSection() {
                       tabRefs.current[tab.key] = el;
                     }}
                     onClick={() => handleTabChange(tab.key)}
-                    className="flex-1 text-center px-8 py-3 text-sm"
+                    className="flex-1 text-center px-3 md:px-8 py-3 text-xs md:text-sm"
                     style={{
                       color: isActive ? "#504B4D" : "#888",
                       fontWeight: isActive ? 600 : 400,
