@@ -85,7 +85,7 @@ export default function SobreMiSection() {
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-16 left-0 right-0 h-[135%]">
+          <div className="absolute bottom-0 md:-bottom-16 left-0 right-0 h-[115%] md:h-[135%]">
             <Image
               src="/images/SobreMi/SobreMi.png"
               alt="Dani Arena"
