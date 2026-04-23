@@ -38,7 +38,7 @@ export default function ContactSection() {
         >
           <a
             className="bg-charcoal text-white rounded-full py-4 px-5 lg:py-5 lg:px-10 hover:bg-goldenOrange transition-colors w-full md:w-max text-center text-sm"
-            href="#"
+            href="https://wa.me/5492645448138?text=Hola%20Dani!%20Me%20gustar%C3%ADa%20coordinar%20una%20reuni%C3%B3n%20con%20vos"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -47,7 +47,7 @@ export default function ContactSection() {
 
           <a
             className="bg-[#25D366] text-charcoal rounded-full py-4 px-5 lg:py-5 lg:px-10 hover:bg-goldenOrange transition-colors w-full md:w-max text-center text-sm"
-            href="#"
+            href="https://wa.me/5492645448138?text=Hola%20Dani!"
             target="_blank"
             rel="noopener noreferrer"
           >

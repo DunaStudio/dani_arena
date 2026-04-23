@@ -136,6 +136,8 @@ export default function Footer() {
               href="https://www.instagram.com/daniarena_asesoria/"
               target="_blank"
               aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors"
             >
               <InstagramIcon />
@@ -177,15 +179,19 @@ export default function Footer() {
                   <FacebookIcon />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/daniarena_asesoria/"
                   aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors duration-200"
                 >
                   <InstagramIcon />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/dani-arena/"
                   aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors duration-200"
                 >
                   <LinkedinIcon />
