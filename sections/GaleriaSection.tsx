@@ -17,6 +17,11 @@ import ImagenVinoteca3 from "@/public/images/vinoteca/foto3.jpg";
 
 import ImagenMarfilia1 from "@/public/images/marfilia/foto1.jpg";
 import ImagenMarfilia2 from "@/public/images/marfilia/foto2.jpg";
+
+import ImagenVarios1 from "@/public/images/varios/foto1.jpg";
+import ImagenVarios2 from "@/public/images/varios/foto2.jpg";
+import ImagenVarios3 from "@/public/images/varios/foto3.jpg";
+import ImagenVarios4 from "@/public/images/varios/foto4.jpg";
 import { RevealLine, StaggerContainer, StaggerItem } from "@/components/motion";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -29,25 +34,25 @@ interface GalleryImage {
 }
 
 const CELLS: GalleryImage[][] = [
-  [{ src: Imagen, alt: "Imagen 1" }],
+  [{ src: ImagenVarios4, alt: "Imagen 1" }],
   [
     { src: ImagenAfrica1, alt: "Imagen 2a" },
     { src: ImagenAfrica2, alt: "Imagen 2b" },
     { src: ImagenAfrica3, alt: "Imagen 2c" },
     { src: ImagenAfrica4, alt: "Imagen 2d" },
   ],
-  [{ src: Imagen, alt: "Imagen 3" }],
+  [{ src: ImagenVarios1, alt: "Imagen 3" }],
   [
     { src: ImagenMarfilia1, alt: "Imagen 4a" },
     { src: ImagenMarfilia2, alt: "Imagen 4b" },
   ],
-  [{ src: Imagen, alt: "Imagen 5" }],
+  [{ src: ImagenVarios2, alt: "Imagen 5" }],
   [
     { src: ImagenVinoteca1, alt: "Imagen 6a" },
     { src: ImagenVinoteca2, alt: "Imagen 6b" },
     { src: ImagenVinoteca3, alt: "Imagen 6c" },
   ],
-  [{ src: Imagen, alt: "Imagen 7" }],
+  [{ src: ImagenVarios3, alt: "Imagen 7" }],
   [{ src: Imagen, alt: "Imagen 8" }],
 ];
 
