@@ -36,14 +36,14 @@ export const programasCardsData = [
     title: "Esencia",
     text: "Ideal si querés empezar a trabajar tu imagen de forma consciente. Un  proceso diseñado para que te conozcas, definas tu identidad y la  traduzcas en decisiones claras.",
     button_text: "Quiero este programa",
-    url: "#",
+    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quiero%20consultarte%20sobre%20el%20programa%20Esencia",
   },
   {
     label: "Programa intensivo — 6 semanas",
     title: "Presencia",
     text: "Incluye marca personal, comunicación y acompañamiento personalizado.  Para quienes quieren un cambio profundo y resultados medibles en su  presencia y posicionamiento.",
     button_text: "Aplicar al programa",
-    url: "#",
+    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Me%20interesa%20aplicar%20al%20programa%20Presencia",
   },
 ];
 
