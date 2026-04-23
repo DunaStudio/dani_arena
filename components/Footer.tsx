@@ -173,7 +173,6 @@ export default function Footer() {
               <div className="flex items-center gap-3 mt-2">
                 <a
                   href="https://www.facebook.com/profile.php?id=61556523500815"
-                  target="_blank"
                   aria-label="Facebook"
                   className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors duration-200"
                 >
@@ -182,7 +181,6 @@ export default function Footer() {
                 <a
                   href="https://www.instagram.com/daniarena_asesoria/"
                   aria-label="Instagram"
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors duration-200"
                 >
@@ -191,7 +189,6 @@ export default function Footer() {
                 <a
                   href="https://www.linkedin.com/in/dani-arena/"
                   aria-label="LinkedIn"
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors duration-200"
                 >
