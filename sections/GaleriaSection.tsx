@@ -1,6 +1,5 @@
 "use client";
 
-import SectionText from "@/components/SectionText";
 import Image, { StaticImageData } from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
@@ -23,8 +22,6 @@ import ImagenVarios2 from "@/public/images/varios/foto2.jpg";
 import ImagenVarios3 from "@/public/images/varios/foto3.jpg";
 import ImagenVarios4 from "@/public/images/varios/foto4.jpg";
 import { RevealLine, StaggerContainer, StaggerItem } from "@/components/motion";
-
-// ─── Types ───────────────────────────────────────────────────────────────────
 
 type ImageSrc = string | StaticImageData;
 
@@ -57,12 +54,10 @@ const CELLS: GalleryImage[][] = [
 ];
 
 const CELL_CLASSES = [
-  // Row 1
   "col-span-2",
   "col-span-4 col-start-3",
   "col-span-3 col-start-7",
   "col-span-3 col-start-10",
-  // Row 2
   "col-span-3 row-start-2",
   "col-span-2 col-start-4 row-start-2",
   "col-span-5 col-start-6 row-start-2",

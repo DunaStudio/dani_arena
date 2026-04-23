@@ -126,18 +126,27 @@ export default function Footer() {
           <h4 className="text-white font-medium text-sm">Redes Sociales</h4>
           <div className="flex items-center gap-3">
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61556523500815"
               aria-label="Facebook"
               className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors"
             >
               <FacebookIcon />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/daniarena_asesoria/"
+              target="_blank"
               aria-label="Instagram"
               className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors"
             >
               <InstagramIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dani-arena/"
+              target="_blank"
+              aria-label="LinkedIn"
+              className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors"
+            >
+              <LinkedinIcon />
             </a>
           </div>
         </div>
