@@ -127,6 +127,8 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <a
               href="https://www.facebook.com/profile.php?id=61556523500815"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors"
             >
@@ -134,7 +136,6 @@ export default function Footer() {
             </a>
             <a
               href="https://www.instagram.com/daniarena_asesoria/"
-              target="_blank"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
@@ -174,6 +175,8 @@ export default function Footer() {
                 <a
                   href="https://www.facebook.com/profile.php?id=61556523500815"
                   aria-label="Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors duration-200"
                 >
                   <FacebookIcon />
@@ -181,6 +184,7 @@ export default function Footer() {
                 <a
                   href="https://www.instagram.com/daniarena_asesoria/"
                   aria-label="Instagram"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors duration-200"
                 >
@@ -189,6 +193,7 @@ export default function Footer() {
                 <a
                   href="https://www.linkedin.com/in/dani-arena/"
                   aria-label="LinkedIn"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors duration-200"
                 >
@@ -248,7 +253,6 @@ export default function Footer() {
             Desarrollado por{" "}
             <a
               href="https://www.instagram.com/dunastudiosj/"
-              target="_blank"
               rel="noopener noreferrer"
               className="text-charcoal font-semibold tracking-wider hover:text-goldenOrange transition-colors duration-300"
             >
