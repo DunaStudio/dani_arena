@@ -172,7 +172,8 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-3 mt-2">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61556523500815"
+                  target="_blank"
                   aria-label="Facebook"
                   className="flex justify-center items-center w-10 h-10 rounded-full border border-white/35 hover:border-white transition-colors duration-200"
                 >
