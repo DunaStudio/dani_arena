@@ -31,15 +31,15 @@ export default function SobreMiSection() {
 
           <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4">
             <span className="md:hidden">
-              <RevealLine delay={0.12}>Soy Dani Arena —</RevealLine>
+              <RevealLine delay={0.12}>Soy Dani Arena</RevealLine>
               <RevealLine delay={0.16}>transformo imagen en</RevealLine>
-              <RevealLine delay={0.2}>posicionamiento estratégico</RevealLine>
+              <RevealLine delay={0.2}>posicionamiento</RevealLine>
             </span>
 
             <span className="hidden md:block">
               <RevealLine delay={0.12}>Soy Dani Arena —</RevealLine>
               <RevealLine delay={0.18}>transformo imagen en</RevealLine>
-              <RevealLine delay={0.24}>posicionamiento estratégico</RevealLine>
+              <RevealLine delay={0.24}>posicionamiento</RevealLine>
             </span>
           </h2>
 
