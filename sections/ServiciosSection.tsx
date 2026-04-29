@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { RevealLine } from "@/components/motion";
+import { RevealLine, StaggerContainer, StaggerItem } from "@/components/motion";
 import { servicios } from "@/utils/constants";
 
 export default function ServiciosSection() {
@@ -34,13 +34,17 @@ export default function ServiciosSection() {
           </p>
         </div>
 
-        <div className="px-6 md:px-0 flex flex-col">
+        <StaggerContainer
+          staggerDelay={0.08}
+          initialDelay={0.2}
+          className="px-6 md:px-0 flex flex-col"
+        >
           {servicios.map((servicio, index) => {
             const isOpen = openIndex === index;
             const num = String(index + 1).padStart(2, "0");
 
             return (
-              <div
+              <StaggerItem
                 key={servicio.title}
                 className="border-t border-charcoal/15 last:border-b"
               >
@@ -129,10 +133,10 @@ export default function ServiciosSection() {
                     )}
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
