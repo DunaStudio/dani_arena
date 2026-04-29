@@ -5,12 +5,11 @@ import ServiciosSection from "@/sections/ServiciosSection";
 import SobreMiSection from "@/sections/SobreMiSection";
 import ParaQuienSection from "@/sections/ParaQuienSection";
 import ProgramasSection from "@/sections/ProgramasSection";
-import TestimoniosSection from "@/sections/TestimoniosSection";
-import TrayectoriaSection from "@/sections/TrayectoriaSection";
 import ContactSection from "@/sections/ContactSection";
 import Footer from "@/components/Footer";
 import GaleriaSectionWrapper from "@/sections/GaleriaSectionWrapper";
 import TestimoniosSectionWrapper from "@/sections/TestimoniosSectionWrapper";
+import TrayectoriaSectionWrapper from "@/sections/TrajectoriaSectionWrapper";
 
 export default function Home() {
   return (
@@ -24,7 +23,7 @@ export default function Home() {
       <FraseSection />
       <GaleriaSectionWrapper />
       <TestimoniosSectionWrapper />
-      <TrayectoriaSection />
+      <TrayectoriaSectionWrapper />
       <ContactSection />
       <Footer />
     </div>

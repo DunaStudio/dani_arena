@@ -2,25 +2,8 @@
 
 import { useState, useRef, useLayoutEffect } from "react";
 import Image from "next/image";
-import logo1 from "@/public/images/EmpresasLogos/logo1.png";
-import logo2 from "@/public/images/EmpresasLogos/logo2.png";
-import logo3 from "@/public/images/EmpresasLogos/logo3.png";
-import logo4 from "@/public/images/EmpresasLogos/logo4.png";
-import logo5 from "@/public/images/EmpresasLogos/logo5.png";
-import logo6 from "@/public/images/EmpresasLogos/logo6.png";
-import logo7 from "@/public/images/EmpresasLogos/logo7.png";
-
-import medio01 from "@/public/images/MediosLogos/TodoNormal.png";
-import medio02 from "@/public/images/MediosLogos/huarpe.png";
-import medio03 from "@/public/images/MediosLogos/mananasCompartidas.png";
-import medio04 from "@/public/images/MediosLogos/radioLaVoz.png";
-import medio05 from "@/public/images/MediosLogos/teLoTengoQueDecir.png";
-import medio06 from "@/public/images/MediosLogos/yoTeInvito.png";
-
-import portadaVideo1 from "@/public/images/portada-evento-porota.png";
-import portadaVideo2 from "@/public/images/portada-evento-sushi.png";
-
 import { FadeIn, RevealLine } from "@/components/motion";
+import useEmblaCarousel from "embla-carousel-react";
 
 type TabKey = "empresas" | "medios" | "eventos";
 
@@ -30,51 +13,11 @@ interface TabContent {
   videos?: { src: string; title?: string; poster?: string }[];
 }
 
-const tabsData: Record<TabKey, TabContent> = {
-  empresas: {
-    description:
-      "Trabajé con profesionales, equipos y organizaciones que buscan fortalecer su comunicación desde la imagen.",
-    logos: [
-      { name: "Paula Rey", src: logo1.src },
-      { name: "Florencia Egarrat", src: logo2.src },
-      { name: "Oeste Andino", src: logo3.src },
-      { name: "Idraet", src: logo4.src },
-      { name: "Nails House", src: logo5.src },
-      { name: "Angela Durand", src: logo6.src },
-      { name: "Africa", src: logo7.src },
-    ],
-  },
-
-  medios: {
-    description:
-      "Apariciones en medios gráficos, digitales y audiovisuales compartiendo perspectivas sobre imagen e identidad.",
-    logos: [
-      { name: "Todo Normal", src: medio01.src },
-      { name: "Huarpe", src: medio02.src },
-      { name: "Mañanas Compartidas", src: medio03.src },
-      { name: "Radio La Voz", src: medio04.src },
-      { name: "Te Lo Tengo Que Decir", src: medio05.src },
-      { name: "Yo Te Invito", src: medio06.src },
-    ],
-  },
-  eventos: {
-    description:
-      "Participé como oradora y consultora en eventos, conferencias y encuentros del mundo corporativo y creativo.",
-    logos: [],
-    videos: [
-      {
-        src: "/reel-porota.mp4",
-        title: "Evento Porota",
-        poster: portadaVideo1.src,
-      },
-      {
-        src: "/reel-sushi-club.mp4",
-        title: "Evento Sushi Club",
-        poster: portadaVideo2.src,
-      },
-    ],
-  },
-};
+interface TrayectoriaData {
+  empresas: TabContent;
+  medios: TabContent;
+  eventos: TabContent;
+}
 
 const tabs: { key: TabKey; label: string }[] = [
   { key: "empresas", label: "Empresas" },
@@ -125,7 +68,7 @@ function Marquee({ logos }: { logos: { name: string; src: string }[] }) {
   const doubled = [...logos, ...logos];
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="max-w-4xl overflow-hidden mx-auto">
       <div ref={trackRef} style={{ display: "flex", willChange: "transform" }}>
         {doubled.map((logo, i) => (
           <MarqueeLogo key={i} name={logo.name} src={logo.src} />
@@ -135,7 +78,53 @@ function Marquee({ logos }: { logos: { name: string; src: string }[] }) {
   );
 }
 
-export default function TrayectoriaSection() {
+function VideosCarousel({
+  videos,
+}: {
+  videos: { src: string; title?: string; poster?: string }[];
+}) {
+  const [emblaRef] = useEmblaCarousel({
+    align: "center",
+    loop: false,
+    dragFree: true,
+  });
+
+  return (
+    <div className="w-full overflow-hidden" ref={emblaRef}>
+      <div className="flex gap-4 justify-center">
+        {videos.map((video, i) => (
+          <div
+            key={i}
+            className="relative overflow-hidden rounded-xl bg-black shadow-lg shrink-0"
+            style={{
+              width: "220px",
+              aspectRatio: "9 / 16",
+              opacity: 0,
+              animation: `logoIn 0.35s ease forwards`,
+              animationDelay: `${i * 80}ms`,
+            }}
+          >
+            <video
+              src={video.src}
+              title={video.title}
+              poster={video.poster}
+              controls
+              playsInline
+              preload="none"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function TrayectoriaSection({
+  data,
+}: {
+  data: TrayectoriaData;
+}) {
   const [activeTab, setActiveTab] = useState<TabKey>("empresas");
   const [displayTab, setDisplayTab] = useState<TabKey>("empresas");
   const [contentVisible, setContentVisible] = useState(true);
@@ -169,7 +158,7 @@ export default function TrayectoriaSection() {
     }, 200);
   };
 
-  const content = tabsData[displayTab];
+  const content = data[displayTab];
 
   return (
     <>
@@ -188,8 +177,8 @@ export default function TrayectoriaSection() {
         id="trayectoria"
         className="bg-porcelain w-full flex items-center justify-center py-12 px-6 md:py-24 md:px-8"
       >
-        <div className="max-w-4xl w-full flex flex-col items-center gap-12">
-          <div className="w-full justify-center items-center">
+        <div className=" w-full flex flex-col items-center gap-12">
+          <div className="w-full justify-center items-center max-w-4xl">
             <RevealLine
               delay={0}
               className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal text-center"
@@ -203,7 +192,7 @@ export default function TrayectoriaSection() {
             </h2>
           </div>
 
-          <FadeIn className="w-full">
+          <FadeIn className="w-full max-w-4xl">
             <div
               ref={containerRef}
               className="relative flex items-center w-full border-b border-charcoal/20"
@@ -264,31 +253,7 @@ export default function TrayectoriaSection() {
             </p>
 
             {content.videos && content.videos.length > 0 ? (
-              <div className="w-full flex flex-wrap justify-center gap-6">
-                {content.videos.map((video, i) => (
-                  <div
-                    key={i}
-                    className="relative overflow-hidden rounded-xl bg-black shadow-lg"
-                    style={{
-                      width: "min(220px, 45%)",
-                      aspectRatio: "9 / 16",
-                      opacity: 0,
-                      animation: `logoIn 0.35s ease forwards`,
-                      animationDelay: `${i * 80}ms`,
-                    }}
-                  >
-                    <video
-                      src={video.src}
-                      title={video.title}
-                      poster={video.poster}
-                      controls
-                      playsInline
-                      preload="none"
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+              <VideosCarousel videos={content.videos} />
             ) : (
               <div key={displayTab} className="w-full">
                 <Marquee logos={content.logos} />
