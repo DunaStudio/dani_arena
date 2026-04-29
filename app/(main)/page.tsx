@@ -1,5 +1,4 @@
 import FraseSection from "@/sections/FraseSection";
-import GaleriaSection from "@/sections/GaleriaSection";
 import HeroSection from "@/sections/HeroSection";
 import QueHagoSection from "@/sections/QueHagoSection";
 import ServiciosSection from "@/sections/ServiciosSection";
@@ -10,6 +9,8 @@ import TestimoniosSection from "@/sections/TestimoniosSection";
 import TrayectoriaSection from "@/sections/TrayectoriaSection";
 import ContactSection from "@/sections/ContactSection";
 import Footer from "@/components/Footer";
+import GaleriaSectionWrapper from "@/sections/GaleriaSectionWrapper";
+import TestimoniosSectionWrapper from "@/sections/TestimoniosSectionWrapper";
 
 export default function Home() {
   return (
@@ -21,8 +22,8 @@ export default function Home() {
       <ProgramasSection />
       <ServiciosSection />
       <FraseSection />
-      <GaleriaSection />
-      <TestimoniosSection />
+      <GaleriaSectionWrapper />
+      <TestimoniosSectionWrapper />
       <TrayectoriaSection />
       <ContactSection />
       <Footer />

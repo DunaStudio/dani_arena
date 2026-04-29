@@ -2,56 +2,18 @@
 
 import Image, { StaticImageData } from "next/image";
 import { useState, useEffect, useCallback } from "react";
-
-import Imagen from "@/public/images/ParaQuien/bg.jpg";
-
-import ImagenAfrica1 from "@/public/images/africa/foto1.jpeg";
-import ImagenAfrica2 from "@/public/images/africa/foto2.jpg";
-import ImagenAfrica3 from "@/public/images/africa/foto3.jpg";
-import ImagenAfrica4 from "@/public/images/africa/foto4.jpg";
-
-import ImagenVinoteca1 from "@/public/images/vinoteca/foto1.jpg";
-import ImagenVinoteca2 from "@/public/images/vinoteca/foto2.jpg";
-import ImagenVinoteca3 from "@/public/images/vinoteca/foto3.jpg";
-
-import ImagenMarfilia1 from "@/public/images/marfilia/foto1.jpg";
-import ImagenMarfilia2 from "@/public/images/marfilia/foto2.jpg";
-
-import ImagenVarios1 from "@/public/images/varios/foto1.jpg";
-import ImagenVarios2 from "@/public/images/varios/foto2.jpg";
-import ImagenVarios3 from "@/public/images/varios/foto3.jpg";
-import ImagenVarios4 from "@/public/images/varios/foto4.jpg";
 import { RevealLine, StaggerContainer, StaggerItem } from "@/components/motion";
 
 type ImageSrc = string | StaticImageData;
 
-interface GalleryImage {
+export interface GalleryImage {
   src: ImageSrc;
   alt: string;
 }
 
-const CELLS: GalleryImage[][] = [
-  [{ src: ImagenVarios4, alt: "Imagen 1" }],
-  [
-    { src: ImagenAfrica1, alt: "Imagen 2a" },
-    { src: ImagenAfrica2, alt: "Imagen 2b" },
-    { src: ImagenAfrica3, alt: "Imagen 2c" },
-    { src: ImagenAfrica4, alt: "Imagen 2d" },
-  ],
-  [{ src: ImagenVarios1, alt: "Imagen 3" }],
-  [
-    { src: ImagenMarfilia1, alt: "Imagen 4a" },
-    { src: ImagenMarfilia2, alt: "Imagen 4b" },
-  ],
-  [{ src: ImagenVarios2, alt: "Imagen 5" }],
-  [
-    { src: ImagenVinoteca1, alt: "Imagen 6a" },
-    { src: ImagenVinoteca2, alt: "Imagen 6b" },
-    { src: ImagenVinoteca3, alt: "Imagen 6c" },
-  ],
-  [{ src: ImagenVarios3, alt: "Imagen 7" }],
-  [{ src: Imagen, alt: "Imagen 8" }],
-];
+interface GaleriaSectionProps {
+  cells: GalleryImage[][];
+}
 
 const CELL_CLASSES = [
   "col-span-2",
@@ -296,7 +258,7 @@ function Lightbox({ src, alt, onClose }: LightboxProps) {
   );
 }
 
-export default function GaleriaSection() {
+export default function GaleriaSection({ cells }: GaleriaSectionProps) {
   const [lightbox, setLightbox] = useState<{
     src: ImageSrc;
     alt: string;
@@ -329,7 +291,7 @@ export default function GaleriaSection() {
             initialDelay={0.2}
             className="grid grid-cols-6 grid-rows-5 gap-5 w-full mt-5 md:hidden"
           >
-            {CELLS.map((images, i) => (
+            {cells.map((images, i) => (
               <StaggerItem key={i} className={CELL_CLASES_MOBILE[i]}>
                 <CarouselCell
                   key={i}
@@ -347,7 +309,7 @@ export default function GaleriaSection() {
             initialDelay={0.2}
             className="grid-cols-12 grid-rows-2 gap-4 w-full mt-5 hidden md:grid"
           >
-            {CELLS.map((images, i) => (
+            {cells.map((images, i) => (
               <StaggerItem key={i} className={CELL_CLASSES[i]}>
                 <CarouselCell
                   key={i}

@@ -47,39 +47,6 @@ export const programasCardsData = [
   },
 ];
 
-export const testimoniosCardsData = [
-  {
-    name: "M. Pérez",
-    position: "CEO de Tech Solutions",
-    testimony:
-      "Me ayudó a ordenar mi imagen y ganar seguridad profesional. El proceso fue mucho más profundo de lo que esperaba.",
-  },
-  {
-    name: "C. Rodríguez",
-    position: "Emprendedora y Coach",
-    testimony:
-      "Superó mis expectativas. No fue solo un cambio estético, sino un proceso profundo de seguridad que impactó directamente en mi forma de negociar y en cómo me perciben mis socios hoy.",
-  },
-  {
-    name: "A. Gómez",
-    position: "Directora de Marketing",
-    testimony:
-      "El programa me ayudó a desarrollar una presencia más segura y auténtica. Recomendaría este proceso a cualquier profesional que quiera crecer.",
-  },
-  {
-    name: "L. Fernández",
-    position: "Fundadora de StartUp XYZ",
-    testimony:
-      "El proceso me ayudó a entender que mi imagen es una herramienta poderosa para comunicar quién soy y lo que represento. Fue un cambio profundo que impactó en mi confianza y en cómo me perciben mis clientes.",
-  },
-  {
-    name: "S. Martínez",
-    position: "Emprendedora",
-    testimony:
-      "Recomendaría este programa a cualquier profesional que quiera trabajar su imagen de forma consciente. Es un proceso profundo que va más allá de lo estético y realmente te ayuda a conectar con tu esencia.",
-  },
-];
-
 export const servicios = [
   {
     title: "Imagen Personal Estratégica",

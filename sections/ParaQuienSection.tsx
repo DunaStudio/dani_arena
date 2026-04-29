@@ -33,7 +33,7 @@ export default function ParaQuienSection() {
   return (
     <section
       id="para-quien"
-      className="bg-porcelain w-full flex items-center justify-center px-6 md:px-20 py-12 md:py-5"
+      className="bg-porcelain w-full flex items-center justify-center px-6 md:px-20 py-12"
     >
       <div className="max-w-300 w-full flex flex-col justify-center items-center">
         <RevealLine delay={0}>
@@ -53,9 +53,9 @@ export default function ParaQuienSection() {
         >
           Trabajo con personas y organizaciones que buscan más que verse bien.
           Profesionales, líderes y equipos que entienden que la imagen no es un
-          detalle, sino una herramienta estratégica para comunicar, diferenciarse
-          y sostener su lugar. No es vanidad — es visibilidad. No es estética —
-          es percepción.
+          detalle, sino una herramienta estratégica para comunicar,
+          diferenciarse y sostener su lugar. No es vanidad — es visibilidad. No
+          es estética — es percepción.
         </FadeUp>
 
         <div className="md:hidden w-full mt-10">

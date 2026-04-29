@@ -2,9 +2,9 @@
 import { RevealLine } from "@/components/motion";
 import SectionText from "@/components/SectionText";
 import TestimonioCard from "@/components/TestimoniosComponents/TestimonioCard";
-import { testimoniosCardsData } from "@/utils/constants";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
+import { TestimonioData } from "./TestimoniosSectionWrapper";
 
 function ArrowButton({
   onClick,
@@ -62,7 +62,13 @@ function ArrowButton({
   );
 }
 
-export default function TestimoniosSection() {
+interface TestimoniоsSectionProps {
+  testimonios: TestimonioData[];
+}
+
+export default function TestimoniosSection({
+  testimonios,
+}: TestimoniоsSectionProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     loop: false,
@@ -128,7 +134,7 @@ export default function TestimoniosSection() {
 
         <div className="w-full overflow-hidden" ref={emblaRef}>
           <div className="flex gap-4">
-            {testimoniosCardsData.map((t, i) => (
+            {testimonios.map((t, i) => (
               <TestimonioCard
                 key={i}
                 testimony={t.testimony}
