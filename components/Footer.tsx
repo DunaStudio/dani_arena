@@ -109,10 +109,10 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-3">
           <h4 className="text-white font-medium text-sm">Contacto</h4>
           <a
-            href="mailto:daniarena@gmail.com"
+            href="mailto:daniarenaasesoria@gmail.com"
             className="text-porcelain/70 font-light text-sm hover:text-goldenOrange transition-colors"
           >
-            daniarena@gmail.com
+            daniarenaasesoria@gmail.com
           </a>
           <a
             href="tel:+5492645448138"
@@ -223,10 +223,10 @@ export default function Footer() {
               <ul className="flex flex-col gap-3">
                 <li>
                   <a
-                    href="mailto:daniarena@gmail.com"
+                    href="mailto:daniarenaasesoria@gmail.com"
                     className="text-porcelain/70 font-light text-sm hover:text-goldenOrange transition-all ease-in-out duration-200"
                   >
-                    daniarena@gmail.com
+                    asesoria@gmail.com
                   </a>
                 </li>
                 <li>
