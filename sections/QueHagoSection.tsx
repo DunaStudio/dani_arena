@@ -66,7 +66,7 @@ export default function QueHagoSection() {
             <div className="flex-1 flex flex-col gap-5 md:pt-2">
               <FadeUp
                 delay={0.28}
-                className="text-charcoal opacity-70 font-light text-sm lg:text-md"
+                className="text-charcoal/70 opacity-70 font-light text-sm lg:text-md"
               >
                 Desarrollo la identidad y la imagen estratégica de personas que
                 lideran, para que su presencia esté alineada con su nivel de
@@ -75,7 +75,7 @@ export default function QueHagoSection() {
               </FadeUp>
               <FadeUp
                 delay={0.36}
-                className="text-charcoal opacity-70 font-light text-sm lg:text-md"
+                className="text-charcoal/70 opacity-70 font-light text-sm lg:text-md"
               >
                 A través de un enfoque integral —que combina identidad,
                 comunicación y psicología del color— construyo sistemas
