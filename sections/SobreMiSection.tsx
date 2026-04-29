@@ -7,10 +7,12 @@ import {
 import Image from "next/image";
 
 const checkItems = [
-  "Más de 10 años de experiencia en consultoría de imagen",
-  "Enfoque integral: personal, empresarial y político",
-  "Metodología adaptada a cada cliente y contexto",
-  "Resultados medibles en presencia y percepción",
+  "Más de 20 años de experiencia en consultoría de imagen integral",
+  "Formación en diseño aplicada a la construcción de identidad y percepción",
+  "Enfoque transversal: trabajo con personas, empresas y contextos de liderazgo",
+  "Metodología estratégica, adaptada a cada perfil, contexto y objetivo",
+  "Integración de imagen, comunicación y psicología del color como sistema",
+  "Procesos que generan claridad, coherencia y un posicionamiento diferencial",
 ];
 
 export default function SobreMiSection() {
@@ -29,32 +31,41 @@ export default function SobreMiSection() {
 
           <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4">
             <span className="md:hidden">
-              <RevealLine delay={0.12}>Soy Dani Arena,</RevealLine>
-              <RevealLine delay={0.16}>tu aliada en</RevealLine>
-              <RevealLine delay={0.2}>imagen estratégica</RevealLine>
+              <RevealLine delay={0.12}>Soy Dani Arena —</RevealLine>
+              <RevealLine delay={0.16}>transformo imagen en</RevealLine>
+              <RevealLine delay={0.2}>posicionamiento estratégico</RevealLine>
             </span>
 
             <span className="hidden md:block">
-              <RevealLine delay={0.12}>Soy Dani Arena, tu aliada </RevealLine>
-              <RevealLine delay={0.18}>en imagen estratégica</RevealLine>
+              <RevealLine delay={0.12}>Soy Dani Arena —</RevealLine>
+              <RevealLine delay={0.18}>transformo imagen en</RevealLine>
+              <RevealLine delay={0.24}>posicionamiento estratégico</RevealLine>
             </span>
           </h2>
 
           <FadeUp
-            delay={0.28}
-            className="text-charcoal opacity-70 font-light text-sm lg:text-md mt-6"
+            delay={0.3}
+            className="text-charcoal opacity-50 font-light text-sm lg:text-md mt-3 italic"
           >
-            Mi misión es democratizar la asesoría de imagen. No es un lujo
-            exclusivo ni algo solo para mujeres interesadas en moda. Es una
-            herramienta poderosa para cualquier persona o empresa que quiera
-            comunicar mejor quién es y lo que ofrece.
+            Para personas que lideran y entienden que la percepción también se gestiona.
           </FadeUp>
+
           <FadeUp
             delay={0.36}
+            className="text-charcoal opacity-70 font-light text-sm lg:text-md mt-6"
+          >
+            Soy especialista en imagen estratégica con más de 20 años de
+            experiencia, con formación en diseño y un enfoque integral que
+            conecta identidad, comunicación y posicionamiento.
+          </FadeUp>
+          <FadeUp
+            delay={0.42}
             className="text-charcoal opacity-70 font-light text-sm lg:text-md mt-4"
           >
-            Trabajo con un enfoque estratégico donde cada decisión de imagen
-            tiene un propósito claro: conectar, persuadir y posicionar.
+            A lo largo de los años observé un patrón constante: muchas personas
+            y organizaciones desarrollan su mensaje, pero no gestionan cómo se
+            ven. Mi trabajo es alinear lo que sos, lo que hacés y lo que
+            proyectás, para que todo comunique en la misma dirección.
           </FadeUp>
           <StaggerContainer
             className="mt-10 flex flex-col gap-5"

@@ -6,27 +6,27 @@ import Icon04 from "@/public/icons/CrownSimple.png";
 export const paraQuienCardsData = [
   {
     icon: Icon01,
-    title: "Personas que ordenan su imagen",
+    title: "Personas en proceso de evolución",
     description:
-      "Querés trabajar tu imagen de forma consciente, alineada con quién sos y hacia dónde vas.",
+      "Querés ordenar tu imagen y alinearla con quién sos y hacia dónde estás creciendo.",
   },
   {
     icon: Icon02,
-    title: "Mujeres y marca personal",
+    title: "Marca personal en desarrollo",
     description:
-      "Desarrollás tu marca personal y necesitás que tu imagen acompañe tu crecimiento profesional.",
+      "Estás construyendo tu posicionamiento y necesitás que tu imagen acompañe ese proceso.",
   },
   {
     icon: Icon03,
     title: "Profesionales y líderes",
     description:
-      "Necesitás fortalecer tu presencia, credibilidad y posicionamiento en entornos de alta exigencia.",
+      "Buscás fortalecer tu presencia, credibilidad y forma de comunicar en entornos exigentes.",
   },
   {
     icon: Icon04,
     title: "Empresas y organizaciones",
     description:
-      "Buscás alinear imagen, cultura y comunicación de equipos para generar coherencia de marca.",
+      "Querés alinear imagen, cultura y comunicación para lograr coherencia y posicionamiento.",
   },
 ];
 
@@ -34,14 +34,14 @@ export const programasCardsData = [
   {
     label: "Programa Base",
     title: "Esencia",
-    text: "Ideal si querés empezar a trabajar tu imagen de forma consciente. Un  proceso diseñado para que te conozcas, definas tu identidad y la  traduzcas en decisiones claras.",
+    text: "El punto de partida para construir una imagen consciente y coherente. Un proceso diseñado para definir tu identidad y traducirla en decisiones claras. Ideal para personas que quieren ordenar su imagen desde la base.",
     button_text: "Quiero este programa",
     url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quiero%20consultarte%20sobre%20el%20programa%20Esencia",
   },
   {
-    label: "Programa intensivo — 6 semanas",
+    label: "Programa Premium",
     title: "Presencia",
-    text: "Incluye marca personal, comunicación y acompañamiento personalizado.  Para quienes quieren un cambio profundo y resultados medibles en su  presencia y posicionamiento.",
+    text: "Desarrollo integral de imagen y posicionamiento. Un programa intensivo para trabajar tu comunicación, tu proyección y tu presencia desde una mirada estratégica. Ideal para personas que buscan un cambio profundo y proyectarse con claridad, seguridad y coherencia.",
     button_text: "Aplicar al programa",
     url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Me%20interesa%20aplicar%20al%20programa%20Presencia",
   },
@@ -82,38 +82,38 @@ export const testimoniosCardsData = [
 
 export const servicios = [
   {
-    title: "Imagen personal",
+    title: "Imagen Personal Estratégica",
     description:
-      "Procesos para alinear tu imagen con tu identidad y objetivos. Trabajo integral desde la base.",
-    cta: "Ver programas",
-    url: "#",
+      "Proceso integral para alinear tu imagen con tu identidad y objetivos. Trabajo sobre percepción, presencia y comunicación para construir una proyección coherente, segura y alineada a tu posicionamiento.",
+    cta: "Consultar",
+    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20Imagen%20Personal%20Estrat%C3%A9gica",
   },
   {
-    title: "Empresas y liderazgo",
+    title: "Empresas y Liderazgo",
     description:
-      "Consultoría y capacitaciones para equipos y organizaciones. Imagen, cultura y comunicación alineadas.",
-    cta: "Trabajar con mi equipo",
-    url: "#",
+      "Consultoría en imagen y comunicación estratégica para organizaciones y equipos. Desarrollo la presencia de líderes y colaboradores para alinear la imagen personal con la identidad de marca, fortaleciendo coherencia, cultura y posicionamiento.",
+    cta: "Consultar",
+    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20servicios%20para%20empresas",
   },
   {
-    title: "Workshops y charlas",
+    title: "Programas y Workshops",
     description:
-      "Espacios para trabajar imagen, comunicación y presencia en formatos grupales y empresariales.",
-    cta: "Consultar disponibilidad",
-    url: "#",
+      "Espacios de formación en imagen, comunicación y presencia para equipos y grupos. Entrenamiento práctico y estratégico para desarrollar una proyección coherente, segura y alineada a objetivos profesionales.",
+    cta: "Consultar",
+    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20Workshops",
   },
   {
-    title: "Asesorías express",
+    title: "Sesiones Estratégicas",
     description:
-      "Soluciones puntuales para momentos clave. Sesiones focalizadas con resultado inmediato.",
-    cta: "Agendar sesión",
-    url: "#",
+      "Trabajo puntual y personalizado para definir cómo proyectarte en momentos clave como entrevistas, eventos, presentaciones o viajes profesionales.",
+    cta: "Consultar",
+    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20Sesiones%20Estrat%C3%A9gicas",
   },
   {
-    title: "Colorimetría",
+    title: "Color Estratégico",
     description:
-      "Análisis de tonos para tu imagen natural. Herramientas precisas para una armonía visual.",
-    cta: "Ver propuesta",
-    url: "#",
+      "Análisis personalizado para definir los colores que mejor representan tu identidad y potencian tu comunicación. Una herramienta clave para alinear imagen, percepción y posicionamiento.",
+    cta: "Consultar",
+    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20Color%20Estrat%C3%A9gico",
   },
 ];

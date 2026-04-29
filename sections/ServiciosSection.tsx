@@ -16,8 +16,8 @@ export default function ServiciosSection() {
             Servicios
           </RevealLine>
           <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4 max-w-200">
-            <RevealLine delay={0.12}>Soluciones de imagen </RevealLine>
-            <RevealLine delay={0.18}>para cada necesidad</RevealLine>
+            <RevealLine delay={0.12}>Otras formas de</RevealLine>
+            <RevealLine delay={0.18}>trabajar juntos</RevealLine>
           </h2>
         </div>
 

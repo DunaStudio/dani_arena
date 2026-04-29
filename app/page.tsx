@@ -17,9 +17,9 @@ export default function Home() {
       <HeroSection />
       <SobreMiSection />
       <QueHagoSection />
-      <ServiciosSection />
       <ParaQuienSection />
       <ProgramasSection />
+      <ServiciosSection />
       <FraseSection />
       <GaleriaSection />
       <TestimoniosSection />

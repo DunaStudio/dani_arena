@@ -10,37 +10,37 @@ const cards = [
     number: "01",
     title: "Identidad",
     description:
-      "Definir quién sos y qué querés proyectar como base de toda decisión de imagen.",
+      "La base de toda proyección. Definir quién sos, qué representás y desde dónde querés posicionarte.",
   },
   {
     number: "02",
     title: "Comunicación",
     description:
-      "Cómo lo decís, en qué contexto y con qué herramientas lo expresás.",
+      "No es solo lo que decís, sino cómo, cuándo y para quién. Construcción de un mensaje claro, coherente y alineado a tu rol.",
   },
   {
     number: "03",
     title: "Lenguaje corporal",
     description:
-      "Tu postura, gestos y movimientos también son mensajes que comunican.",
+      "El cuerpo como canal de percepción. Gestualidad, postura y movimiento al servicio de tu posicionamiento.",
   },
   {
     number: "04",
     title: "Presencia",
     description:
-      "El impacto que generás en una sala, en una pantalla, en cada interacción.",
+      "La forma en la que ocupás los espacios. Tu impacto en reuniones, entornos profesionales y escenarios de visibilidad.",
   },
   {
     number: "05",
     title: "Color estratégico",
     description:
-      "La psicología del color aplicada a la comunicación personal y de marca.",
+      "El color como herramienta de comunicación. Aplicado a identidad personal y marca para reforzar percepción e intención.",
   },
   {
     number: "06",
     title: "Marca personal",
     description:
-      "La alineación de todos los elementos para crear una presencia reconocible.",
+      "La integración de todos los elementos en una identidad sólida, reconocible y consistente en el tiempo.",
   },
 ];
 
@@ -60,27 +60,27 @@ export default function QueHagoSection() {
           </RevealLine>
           <div className="flex flex-col md:grid md:grid-cols-2 gap-5">
             <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4 text-pretty">
-              <RevealLine delay={0.12}>La imagen como un</RevealLine>
-              <RevealLine delay={0.18}>lenguaje completo</RevealLine>
+              <RevealLine delay={0.12}>La imagen como sistema</RevealLine>
+              <RevealLine delay={0.18}>de posicionamiento</RevealLine>
             </h2>
             <div className="flex-1 flex flex-col gap-5 md:pt-2">
               <FadeUp
                 delay={0.28}
                 className="text-charcoal opacity-70 font-light text-sm lg:text-md"
               >
-                No se trata solo de cómo te vestís, sino de cómo comunicás, te
-                expresás y te posicionás. A través de un enfoque integral,
-                acompaño procesos donde se alinean la identidad, la comunicación
-                y la presencia.
+                Desarrollo la identidad y la imagen estratégica de personas que
+                lideran, para que su presencia esté alineada con su nivel de
+                decisión e influencia. No trabajo sobre la apariencia. Trabajo
+                sobre la percepción.
               </FadeUp>
               <FadeUp
                 delay={0.36}
                 className="text-charcoal opacity-70 font-light text-sm lg:text-md"
               >
-                También trabajo con empresas, integrando la imagen personal de
-                líderes y equipos con la identidad de marca. El resultado es una
-                imagen auténtica, estratégica y coherente, que genera confianza,
-                credibilidad y posicionamiento.
+                A través de un enfoque integral —que combina identidad,
+                comunicación y psicología del color— construyo sistemas
+                coherentes que proyectan con claridad quién sos, qué representás
+                y cómo querés ser percibido/a.
               </FadeUp>
             </div>
           </div>
