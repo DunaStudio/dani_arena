@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import Image from "next/image";
 import { FadeIn, RevealLine } from "@/components/motion";
 import useEmblaCarousel from "embla-carousel-react";
@@ -83,37 +83,88 @@ function VideosCarousel({
 }: {
   videos: { src: string; title?: string; poster?: string }[];
 }) {
-  const [emblaRef] = useEmblaCarousel({
-    align: "center",
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
     loop: false,
     dragFree: true,
   });
 
-  return (
-    <div className="w-full overflow-hidden" ref={emblaRef}>
-      <div className="flex gap-4 justify-center">
+  const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setCurrent(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
+  }, [emblaApi]);
+
+  const videoCard = (
+    video: { src: string; title?: string; poster?: string },
+    i: number,
+  ) => (
+    <div
+      className="relative overflow-hidden rounded-xl bg-black shadow-lg shrink-0"
+      style={{
+        width: "220px",
+        aspectRatio: "9 / 16",
+        opacity: 0,
+        animation: `logoIn 0.35s ease forwards`,
+        animationDelay: `${i * 80}ms`,
+      }}
+    >
+      <video
+        src={video.src}
+        title={video.title}
+        poster={video.poster}
+        controls
+        playsInline
+        preload="none"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    </div>
+  );
+
+  if (!isMobile) {
+    return (
+      <div className="w-full flex flex-wrap justify-center gap-4">
         {videos.map((video, i) => (
-          <div
+          <div key={i}>{videoCard(video, i)}</div>
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full flex flex-col items-center gap-5">
+      <div className="w-full overflow-hidden" ref={emblaRef}>
+        <div className="flex gap-4">
+          {videos.map((video, i) => (
+            <div key={i}>{videoCard(video, i)}</div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex justify-center gap-2">
+        {videos.map((_, i) => (
+          <button
             key={i}
-            className="relative overflow-hidden rounded-xl bg-black shadow-lg shrink-0"
-            style={{
-              width: "220px",
-              aspectRatio: "9 / 16",
-              opacity: 0,
-              animation: `logoIn 0.35s ease forwards`,
-              animationDelay: `${i * 80}ms`,
-            }}
-          >
-            <video
-              src={video.src}
-              title={video.title}
-              poster={video.poster}
-              controls
-              playsInline
-              preload="none"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
+            onClick={() => emblaApi?.scrollTo(i)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              i === current ? "bg-charcoal w-5" : "bg-charcoal/25 w-1.5"
+            }`}
+          />
         ))}
       </div>
     </div>
