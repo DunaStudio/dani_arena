@@ -51,36 +51,116 @@ export const servicios = [
   {
     title: "Imagen Personal Estratégica",
     description:
-      "Proceso integral para alinear tu imagen con tu identidad y objetivos. Trabajo sobre percepción, presencia y comunicación para construir una proyección coherente, segura y alineada a tu posicionamiento.",
-    cta: "Consultar",
-    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20Imagen%20Personal%20Estrat%C3%A9gica",
+      "Construyo tu imagen para que exprese con claridad quién sos y te posicione con seguridad.",
+    longDescription:
+      "Desarrollo integral de tu imagen como herramienta de posicionamiento. Un proceso personalizado para alinear identidad, comunicación y presencia con tus objetivos personales y profesionales.",
+    itemsTitle:
+      "Trabajo sobre cómo te percibís y cómo sos percibido/a, integrando:",
+    items: [
+      "Lenguaje corporal",
+      "Comunicación verbal",
+      "Estética y estilo personal",
+      "Proyección en distintos contextos",
+    ],
+    footer:
+      "No se trata solo de qué usás, sino de cómo habitás tu imagen. El resultado es una presencia coherente, segura y alineada con tu nivel de desarrollo y proyección.",
   },
   {
     title: "Empresas y Liderazgo",
     description:
-      "Consultoría en imagen y comunicación estratégica para organizaciones y equipos. Desarrollo la presencia de líderes y colaboradores para alinear la imagen personal con la identidad de marca, fortaleciendo coherencia, cultura y posicionamiento.",
-    cta: "Consultar",
-    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20servicios%20para%20empresas",
+      "Potencio la presencia de líderes y equipos para reflejar la identidad de marca y fortalecer su posicionamiento. ",
+    longDescription:
+      "Desarrollo la presencia de líderes y colaboradores para alinear la imagen personal con la identidad de marca, fortaleciendo coherencia, cultura y posicionamiento. Trabajo con empresas que entienden que la imagen no es solo estética, sino una herramienta de cultura, posicionamiento y coherencia interna y externa. Acompaño a líderes y equipos en el desarrollo de una presencia alineada a los valores, la identidad y los objetivos de la organización, fortaleciendo la forma en la que comunican, representan y sostienen su rol.",
+    itemsTitle: "El enfoque integra:",
+    items: [
+      "Imagen personal en contextos profesionales",
+      "Comunicación verbal y no verbal",
+      "Presencia en entornos clave (reuniones, medios, exposiciones)",
+      "Coherencia entre identidad de marca y quienes la representan",
+    ],
+    footer:
+      "El resultado es una comunicación más clara, una presencia consistente y una percepción alineada a la cultura y el posicionamiento de la empresa.",
   },
   {
     title: "Programas y Workshops",
     description:
-      "Espacios de formación en imagen, comunicación y presencia para equipos y grupos. Entrenamiento práctico y estratégico para desarrollar una proyección coherente, segura y alineada a objetivos profesionales.",
-    cta: "Consultar",
-    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20Workshops",
+      "Entreno imagen, comunicación y presencia para lograr una proyección clara, coherente y profesional.",
+    longDescription:
+      "Diseño y facilito programas, workshops y capacitaciones para organizaciones y grupos que buscan desarrollar una imagen coherente con su rol, su contexto y sus objetivos. No son talleres de estética. Son espacios de trabajo donde se entrenan habilidades de percepción, comunicación y posicionamiento.",
+    itemsTitle: "Los contenidos se adaptan a cada necesidad y pueden abordar:",
+    items: [
+      "Imagen y presencia en entornos profesionales",
+      "Comunicación verbal y no verbal",
+      "Construcción de marca personal",
+      "Uso estratégico del color",
+      "Coherencia entre identidad y proyección",
+    ],
+    footer:
+      "Formatos disponibles: in company · grupos privados · experiencias diseñadas a medida",
+  },
+  {
+    title: "⁠Identidad Visual y Marca",
+    description:
+      "Defino la dirección visual de tu marca para que sea clara, coherente y reconocible.",
+    longDescription:
+      "Desarrollo de identidad visual alineada al posicionamiento personal o de marca. Trabajo sobre la construcción y dirección de la identidad visual como parte de un sistema estratégico de comunicación. No se trata solo de diseño, sino de definir cómo se ve una marca para que exprese con coherencia quién es, qué representa y cómo quiere ser percibida.",
+    itemsTitle: "El proceso puede incluir:",
+    items: [
+      "Desarrollo o rediseño de identidad visual",
+      "Definición de criterios estéticos y comunicacionales",
+      "Dirección visual aplicada a marca personal o corporativa",
+      "Lineamientos para una comunicación coherente en todos los puntos de contacto",
+    ],
+    footer:
+      "Cuando el proyecto lo requiere, se articula con equipos de diseño y comunicación para la implementación.",
   },
   {
     title: "Sesiones Estratégicas",
     description:
-      "Trabajo puntual y personalizado para definir cómo proyectarte en momentos clave como entrevistas, eventos, presentaciones o viajes profesionales.",
-    cta: "Consultar",
-    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20Sesiones%20Estrat%C3%A9gicas",
+      "Resuelvo cómo proyectarte en momentos clave con claridad y seguridad.",
+    longDescription:
+      "Intervenciones puntuales para momentos de alta visibilidad. Sesiones individuales diseñadas para trabajar decisiones específicas de imagen y comunicación en contextos clave.",
+    itemsTitle: "Ideal para:",
+    items: [
+      "Entrevistas",
+      "Eventos relevantes",
+      "Exposiciones o presentaciones",
+      "Viajes o cambios de contexto profesional",
+    ],
+    footer:
+      "El enfoque es rápido, pero no superficial: se analizan las variables necesarias para asegurar coherencia, claridad y una proyección alineada al objetivo. El resultado es una toma de decisiones más segura y una presencia preparada para el momento que lo requiere.",
+  },
+  {
+    title: "Alianzas Estratégicas",
+    description:
+      "Integro la imagen en experiencias y proyectos para elevar su valor y diferenciación.",
+    longDescription:
+      "Integración de imagen estratégica en experiencias, servicios y espacios de alto valor. Colaboro con marcas, profesionales y espacios que buscan elevar la calidad de su propuesta incorporando la imagen como una dimensión clave de la experiencia.",
+    itemsTitle:
+      "Participo como especialista, aportando una mirada estratégica sobre identidad, comunicación y presencia en distintos contextos, como:",
+    items: [
+      "Experiencias y eventos",
+      "Espacios de bienestar y estética",
+      "Propuestas interdisciplinarias",
+      "Proyectos vinculados a imagen y posicionamiento",
+    ],
+    footer:
+      "El objetivo es sumar valor, coherencia y diferenciación, alineando cada punto de contacto con la percepción que se quiere construir.",
   },
   {
     title: "Color Estratégico",
     description:
-      "Análisis personalizado para definir los colores que mejor representan tu identidad y potencian tu comunicación. Una herramienta clave para alinear imagen, percepción y posicionamiento.",
-    cta: "Consultar",
-    url: "https://wa.me/5492645448138?text=Hola%20Dani!%20Quisiera%20consultar%20sobre%20Color%20Estrat%C3%A9gico",
+      "Uso el color para reforzar tu mensaje y construir una imagen coherente.",
+    longDescription:
+      "El color como herramienta de comunicación y posicionamiento. Trabajo el color desde una mirada estratégica, no solo estética. A través de un análisis personalizado, defino los tonos que mejor acompañan tu identidad, tu energía y el mensaje que querés proyectar, considerando tanto variables físicas como simbólicas. El color no solo impacta cómo te ves, sino cómo te perciben y cómo te sentís.",
+    itemsTitle: "Se utiliza para:",
+    items: [
+      "Potenciar tu presencia",
+      "Reforzar tu mensaje",
+      "Generar determinadas percepciones",
+      "Construir coherencia entre imagen personal y marca",
+    ],
+    footer:
+      "El resultado es una paleta definida con intención, que funciona como guía para tu imagen, tu comunicación y tus decisiones visuales.",
   },
 ];
