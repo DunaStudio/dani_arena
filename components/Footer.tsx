@@ -226,7 +226,7 @@ export default function Footer() {
                     href="mailto:daniarenaasesoria@gmail.com"
                     className="text-porcelain/70 font-light text-sm hover:text-goldenOrange transition-all ease-in-out duration-200"
                   >
-                    asesoria@gmail.com
+                    daniarenaasesoria@gmail.com
                   </a>
                 </li>
                 <li>
