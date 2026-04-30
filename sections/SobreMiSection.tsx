@@ -30,17 +30,30 @@ export default function SobreMiSection() {
           </RevealLine>
 
           <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4">
-            <RevealLine delay={0.12}>Hola, soy Dani Arena.</RevealLine>
-            <RevealLine delay={0.18}>Tu aliada estratégica.</RevealLine>
+            <RevealLine delay={0.12}>Soy Dani Arena,</RevealLine>
+            <RevealLine delay={0.18}>
+              transformo imagen en posicionamiento.
+            </RevealLine>
           </h2>
 
           <div className="mt-6 flex flex-col gap-4 text-charcoal/70 font-light text-sm lg:text-md leading-relaxed max-w-xl">
             <FadeUp delay={0.24}>
               <p>
-                Acompaño a personas y organizaciones a construir una presencia
-                que no solo se vea bien, sino que trabaje a su favor. Mi enfoque
-                combina la estética con la estrategia para lograr resultados
-                tangibles.
+                Mi trabajo es alinear lo que sos, lo que hacés y lo que
+                proyectás para que todo comunique con coherencia, claridad y
+                autoridad.
+              </p>
+            </FadeUp>
+            <FadeUp delay={0.24}>
+              <p>
+                La imagen no es estética. Es estrategia: una herramienta clave
+                para posicionarte, diferenciarte y sostener tu lugar.
+              </p>
+            </FadeUp>
+            <FadeUp delay={0.24}>
+              <p>
+                No se trata de verse mejor, sino de proyectar con claridad quién
+                sos y construir una presencia coherente y estratégica.
               </p>
             </FadeUp>
           </div>
