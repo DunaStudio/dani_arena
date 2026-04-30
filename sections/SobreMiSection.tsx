@@ -22,7 +22,7 @@ export default function SobreMiSection() {
       className="w-full bg-porcelain flex justify-center px-6 md:px-20 pt-12 md:pt-20 pb-0"
     >
       <div className="max-w-300 w-full flex flex-col md:flex-row items-center md:items-end gap-10 md:gap-20">
-        <div className="flex-1 flex flex-col pb-10 md:pb-24">
+        <div className="flex-1 flex flex-col pb-10 md:pb-8">
           <RevealLine delay={0.06}>
             <p className="text-goldenOrange uppercase tracking-[0.25em] text-xs lg:text-sm font-normal">
               Sobre mí
@@ -80,8 +80,8 @@ export default function SobreMiSection() {
           </StaggerContainer>
         </div>
 
-        <div className="relative w-full md:w-115 h-80 md:h-145 shrink-0">
-          <div className="absolute bottom-0 left-0 right-0 h-[125%] md:h-[135%]">
+        <div className="relative w-full md:w-[500px] h-80 md:h-[600px] shrink-0">
+          <div className="absolute bottom-0 left-0 right-0 h-[125%] md:h-[145%]">
             <Image
               src="/images/SobreMi/SobreMi.png"
               alt="Dani Arena"
