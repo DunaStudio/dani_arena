@@ -23,17 +23,16 @@ export default function HeroSection() {
         </RevealLine>
 
         <h1 className="text-charcoal text-[28px] md:text-[60px] font-medium text-center leading-[1.2] mt-4 max-w-200">
-          <RevealLine delay={0.08}>Tu imagen es tu mejor</RevealLine>
-          <RevealLine delay={0.16}>herramienta estratégica</RevealLine>
+          <RevealLine delay={0.08}>Tu imagen habla</RevealLine>
         </h1>
 
         <FadeUp
           delay={0.28}
           className="text-charcoal/70 text-center text-xs lg:text-base font-light mt-6 max-w-130"
         >
-          Asesoría de imagen para profesionales, empresas y campañas políticas.
-          Porque la imagen no es solo estética, es comunicación, presencia y
-          estrategia.
+          Trabajo la imagen como una herramienta estratégica de comunicación
+          para personas, líderes y empresas que buscan coherencia, presencia y
+          posicionamiento
         </FadeUp>
 
         <FadeIn
