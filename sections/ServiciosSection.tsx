@@ -35,7 +35,7 @@ export default function ServiciosSection() {
           </h2>
           <FadeUp
             delay={0.28}
-            className="text-charcoal opacity-60 font-light text-sm md:text-base mt-4 max-w-xl text-pretty"
+            className="text-charcoal/70 opacity-60 font-light text-sm md:text-base mt-4 max-w-xl text-pretty"
           >
             La asesoría de imagen va más allá de la estética. <br />
             Es estrategia, comunicación y la construcción de una presencia que

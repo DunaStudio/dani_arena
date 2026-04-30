@@ -274,7 +274,7 @@ export default function TrayectoriaSection({
             }}
           >
             <p
-              className="text-center text-charcoal text-base leading-relaxed max-w-xl"
+              className="text-center text-charcoal/70 text-base leading-relaxed max-w-xl"
               style={{ fontWeight: 300 }}
             >
               {content.description}
