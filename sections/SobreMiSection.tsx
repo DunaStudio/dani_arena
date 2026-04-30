@@ -80,7 +80,7 @@ export default function SobreMiSection() {
           </StaggerContainer>
         </div>
 
-        <div className="relative w-full md:w-[500px] h-80 md:h-[600px] shrink-0">
+        <div className="relative w-full md:w-125 h-80 md:h-150 shrink-0">
           <div className="absolute bottom-0 left-0 right-0 h-[125%] md:h-[145%]">
             <Image
               src="/images/SobreMi/SobreMi.png"
