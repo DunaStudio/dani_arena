@@ -8,7 +8,7 @@ export default function ProgramaCard({
   url,
 }: ProgramaCardProps) {
   return (
-    <div className="bg-white rounded-[5px] p-6 md:p-10 flex flex-col items-end gap-5 h-full">
+    <div className="bg-white rounded-[5px] p-6 md:p-10 flex flex-col justify-between items-end gap-5 h-full">
       <div className="w-full">
         <p className="text-goldenOrange font-normal text-[12px] tracking-[25%] uppercase">
           {label}
