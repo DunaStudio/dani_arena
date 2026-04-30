@@ -1,7 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { RevealLine, StaggerContainer, StaggerItem } from "@/components/motion";
+import {
+  FadeUp,
+  RevealLine,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/motion";
 import { servicios } from "@/utils/constants";
 
 export default function ServiciosSection() {
@@ -28,10 +33,13 @@ export default function ServiciosSection() {
             <RevealLine delay={0.12}>Otras formas de</RevealLine>
             <RevealLine delay={0.18}>trabajar juntos</RevealLine>
           </h2>
-          <p className="text-charcoal opacity-60 font-light text-sm md:text-base mt-4 max-w-xl text-pretty">
+          <FadeUp
+            delay={0.28}
+            className="text-charcoal opacity-60 font-light text-sm md:text-base mt-4 max-w-xl text-pretty"
+          >
             La asesoría de imagen va más allá de la estética. Es estrategia,
             comunicación y la construcción de una presencia que abre puertas.
-          </p>
+          </FadeUp>
         </div>
 
         <StaggerContainer
