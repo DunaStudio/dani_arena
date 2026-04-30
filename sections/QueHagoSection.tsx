@@ -59,8 +59,9 @@ export default function QueHagoSection() {
             Que hago
           </RevealLine>
           <div className="flex flex-col md:grid md:grid-cols-2 gap-5">
-            <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4 text-pretty">
-              <RevealLine delay={0.12}>La imagen como sistema</RevealLine>
+            <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px] font-medium leading-[1.2] mt-4 text-pretty flex flex-col">
+              <RevealLine delay={0.12}>La imagen</RevealLine>
+              <RevealLine delay={0.18}>como sistema</RevealLine>
             </h2>
             <div className="flex-1 flex flex-col gap-5 md:pt-2">
               <FadeUp
