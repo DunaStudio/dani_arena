@@ -26,4 +26,12 @@ export const testimonyType = defineType({
         Rule.required().error("El contenido es obligatorio."),
     }),
   ],
+  preview: {
+    prepare() {
+      return {
+        title: "Testimonios",
+        subtitle: "Gestión de testimonios de clientes",
+      };
+    },
+  },
 });

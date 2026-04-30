@@ -77,4 +77,12 @@ export const galleryType = defineType({
       ],
     }),
   ],
+  preview: {
+    prepare() {
+      return {
+        title: "Galería de fotos",
+        subtitle: "Seleccion de imágenes para la sección galería",
+      };
+    },
+  },
 });

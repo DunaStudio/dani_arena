@@ -115,4 +115,12 @@ export const trayectoryType = defineType({
       ],
     }),
   ],
+  preview: {
+    prepare() {
+      return {
+        title: "Trayectoria",
+        subtitle: "Gestión de logos, medios y eventos",
+      };
+    },
+  },
 });
