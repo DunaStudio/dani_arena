@@ -58,7 +58,7 @@ export default function ServiciosSection() {
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex items-start gap-6 md:gap-10 py-5 md:py-6 text-left group"
+                  className="w-full flex items-start gap-6 md:gap-10 py-5 md:py-6 text-left group cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <span className="text-charcoal/30 text-sm font-light w-6 shrink-0 mt-0.5">

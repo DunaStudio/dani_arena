@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
 
 const navegacion = [
@@ -11,6 +12,18 @@ const navegacion = [
   { label: "Testimonios", href: "#testimonios" },
   { label: "Trayectoria", href: "#trayectoria" },
 ];
+
+function scrollTo(href: string) {
+  const id = href.replace("#", "");
+  const el = document.getElementById(id);
+  const navbar = document.querySelector("nav");
+  if (!el) return;
+
+  const navbarHeight = navbar?.offsetHeight ?? 0;
+  const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+  window.scrollTo({ top, behavior: "smooth" });
+}
 
 function FacebookIcon() {
   return (
@@ -95,13 +108,17 @@ export default function Footer() {
           <h4 className="text-white font-medium text-sm">Navegación</h4>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-1">
             {navegacion.map(({ label, href }) => (
-              <Link
+              <a
                 key={label}
                 href={href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo(href);
+                }}
                 className="text-porcelain/70 font-light text-sm hover:text-goldenOrange transition-colors"
               >
                 {label}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -207,12 +224,16 @@ export default function Footer() {
               <ul className="flex flex-col gap-3">
                 {navegacion.map(({ label, href }) => (
                   <li key={label}>
-                    <Link
+                    <a
                       href={href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollTo(href);
+                      }}
                       className="text-porcelain/70 font-light text-sm hover:text-goldenOrange transition-all ease-in-out duration-200"
                     >
                       {label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
