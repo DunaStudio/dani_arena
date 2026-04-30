@@ -4,6 +4,7 @@ import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import Image from "next/image";
 import { FadeIn, RevealLine } from "@/components/motion";
 import useEmblaCarousel from "embla-carousel-react";
+import Marquee from "react-fast-marquee";
 
 type TabKey = "empresas" | "medios" | "eventos";
 
@@ -40,41 +41,17 @@ function MarqueeLogo({ name, src }: { name: string; src: string }) {
   );
 }
 
-function Marquee({ logos }: { logos: { name: string; src: string }[] }) {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const xRef = useRef(0);
-  const rafRef = useRef<number>(0);
-  const SPEED = 0.5;
-
-  useLayoutEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const halfWidth = track.scrollWidth / 2;
-
-    const tick = () => {
-      xRef.current -= SPEED;
-      if (Math.abs(xRef.current) >= halfWidth) {
-        xRef.current = 0;
-      }
-      track.style.transform = `translateX(${xRef.current}px)`;
-      rafRef.current = requestAnimationFrame(tick);
-    };
-
-    rafRef.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, [logos]);
-
-  const doubled = [...logos, ...logos];
-
+function MarqueeComponent({
+  logos,
+}: {
+  logos: { name: string; src: string }[];
+}) {
   return (
-    <div className="max-w-4xl overflow-hidden mx-auto">
-      <div ref={trackRef} style={{ display: "flex", willChange: "transform" }}>
-        {doubled.map((logo, i) => (
-          <MarqueeLogo key={i} name={logo.name} src={logo.src} />
-        ))}
-      </div>
-    </div>
+    <Marquee autoFill loop={0} className="max-w-4xl overflow-hidden mx-auto">
+      {logos.map((logo, i) => (
+        <MarqueeLogo key={i} name={logo.name} src={logo.src} />
+      ))}
+    </Marquee>
   );
 }
 
@@ -307,7 +284,7 @@ export default function TrayectoriaSection({
               <VideosCarousel videos={content.videos} />
             ) : (
               <div key={displayTab} className="w-full">
-                <Marquee logos={content.logos} />
+                <MarqueeComponent logos={content.logos} />
               </div>
             )}
           </div>
