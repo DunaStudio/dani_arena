@@ -43,19 +43,26 @@ export default function ParaQuienSection() {
         </RevealLine>
 
         <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px]  font-medium text-center leading-[1.2] mt-4">
-          <RevealLine delay={0.08}>Para quienes entienden que</RevealLine>
-          <RevealLine delay={0.16}>la imagen es posicionamiento</RevealLine>
+          <RevealLine delay={0.08}>
+            Trabajo con personas y organizaciones
+          </RevealLine>
+          <RevealLine delay={0.16}>que buscan más que verse bien</RevealLine>
         </h2>
 
         <FadeUp
           delay={0.28}
           className="text-charcoal/70 text-center text-xs lg:text-base font-light mt-6 max-w-160"
         >
-          Trabajo con personas y organizaciones que buscan más que verse bien.
-          Profesionales, líderes y equipos que entienden que la imagen no es un
-          detalle, sino una herramienta estratégica para comunicar,
-          diferenciarse y sostener su lugar. No es vanidad — es visibilidad. No
-          es estética — es percepción.
+          Profesionales, lideres y equipos que entienden que la imagen no es un
+          detalle sino una herramienta estratégica para comunicar, diferenciarse
+          y sostener su lugar.
+        </FadeUp>
+
+        <FadeUp delay={0.38} className="mt-6 flex flex-col items-center gap-4">
+          <div className="w-10 h-px bg-goldenOrange/60" />
+          <p className="text-charcoal text-center text-xs lg:text-sm font-light italic tracking-wide">
+            No es vanidad, es visibilidad. No es estética, es percepción.
+          </p>
         </FadeUp>
 
         <div className="md:hidden w-full mt-10">

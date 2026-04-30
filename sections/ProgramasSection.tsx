@@ -19,7 +19,6 @@ export default function ProgramasSection() {
 
         <h2 className="text-charcoal text-[28px] md:text-[36px] xl:text-[48px]  font-medium text-left leading-[1.2] mt-4">
           <RevealLine delay={0.08}>Procesos de transformación</RevealLine>
-          <RevealLine delay={0.16}>en imagen y posicionamiento</RevealLine>
         </h2>
         <StaggerContainer
           staggerDelay={0.08}
