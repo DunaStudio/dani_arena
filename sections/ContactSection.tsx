@@ -16,33 +16,27 @@ export default function ContactSection() {
           </RevealLine>
 
           <h2 className="text-charcoal font-medium text-[28px] md:text-[36px] xl:text-[48px] text-center whitespace-pre-line mt-4 text-pretty">
-            <RevealLine delay={0.12}>
+            <RevealLine delay={0.12}>Tu imagen ya está comunicando.</RevealLine>
+
+            <RevealLine delay={0.2} className="font-light">
               La pregunta es: ¿está comunicando lo que realmente querés
               posicionar?
             </RevealLine>
           </h2>
-
-          <FadeUp
-            delay={0.32}
-            className="text-charcoal opacity-70 text-center mt-6 font-light text-sm md:text-base text-pretty"
-          >
-            La asesoría de imagen va más allá de la estética. Es estrategia,
-            comunicación y la construcción de una presencia que abre puertas.
-          </FadeUp>
         </div>
 
         <FadeUp
           delay={0.42}
           className="w-full md:w-auto flex flex-col md:flex-row justify-center items-center gap-4 mt-12"
         >
-          <a
+          {/* <a
             className="bg-charcoal text-white rounded-full py-4 px-5 lg:py-5 lg:px-10 hover:bg-goldenOrange transition-colors w-full md:w-max text-center text-sm"
             href="https://wa.me/5492645448138?text=Hola%20Dani!%20Me%20gustar%C3%ADa%20coordinar%20una%20reuni%C3%B3n%20con%20vos"
             target="_blank"
             rel="noopener noreferrer"
           >
             Coordinar una reunión
-          </a>
+          </a> */}
 
           <a
             className="bg-[#25D366] text-charcoal rounded-full py-4 px-5 lg:py-5 lg:px-10 hover:bg-goldenOrange transition-colors w-full md:w-max text-center text-sm"
@@ -50,7 +44,7 @@ export default function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Escribirme por whatsapp
+            Escribime por whatsapp
           </a>
         </FadeUp>
       </div>
