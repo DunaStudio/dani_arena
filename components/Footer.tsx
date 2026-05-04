@@ -184,9 +184,7 @@ export default function Footer() {
                 quality={100}
               />
               <p className="font-light leading-[1.6] max-w-65 text-porcelain/70 text-sm">
-                Consultoría de imagen estratégica para profesionales, empresas y
-                campañas políticas. Transformando presencias para maximizar
-                impacto.
+                Imagen | Estrategia | Comunicación
               </p>
               <div className="flex items-center gap-3 mt-2">
                 <a
