@@ -4,17 +4,39 @@ export const trayectoryType = defineType({
   name: "trayectoria",
   title: "Trayectoria",
   type: "document",
+
+  fieldsets: [
+    {
+      name: "empresas",
+      title: "Empresas",
+      options: { collapsible: true, collapsed: false },
+    },
+    {
+      name: "medios",
+      title: "Medios",
+      options: { collapsible: true, collapsed: true },
+    },
+    {
+      name: "eventos",
+      title: "Eventos",
+      options: { collapsible: true, collapsed: true },
+    },
+  ],
+
   fields: [
+    // -------- EMPRESAS --------
     defineField({
       name: "empresasDescripcion",
       title: "Descripción — Empresas",
       type: "text",
+      fieldset: "empresas",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "empresasLogos",
       title: "Logos — Empresas",
       type: "array",
+      fieldset: "empresas",
       of: [
         defineArrayMember({
           type: "object",
@@ -40,16 +62,19 @@ export const trayectoryType = defineType({
       ],
     }),
 
+    // -------- MEDIOS --------
     defineField({
       name: "mediosDescripcion",
       title: "Descripción — Medios",
       type: "text",
+      fieldset: "medios",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "mediosLogos",
       title: "Logos — Medios",
       type: "array",
+      fieldset: "medios",
       of: [
         defineArrayMember({
           type: "object",
@@ -75,16 +100,19 @@ export const trayectoryType = defineType({
       ],
     }),
 
+    // -------- EVENTOS --------
     defineField({
       name: "eventosDescripcion",
       title: "Descripción — Eventos",
       type: "text",
+      fieldset: "eventos",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "eventosVideos",
       title: "Videos — Eventos",
       type: "array",
+      fieldset: "eventos",
       of: [
         defineArrayMember({
           type: "object",
@@ -115,6 +143,7 @@ export const trayectoryType = defineType({
       ],
     }),
   ],
+
   preview: {
     prepare() {
       return {

@@ -27,11 +27,9 @@ export const testimonyType = defineType({
     }),
   ],
   preview: {
-    prepare() {
-      return {
-        title: "Testimonios",
-        subtitle: "Gestión de testimonios de clientes",
-      };
+    select: {
+      title: "name",
+      subtitle: "role",
     },
   },
 });
