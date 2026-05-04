@@ -10,6 +10,7 @@ export interface TestimonioData {
 
 export default async function TestimoniosSectionWrapper() {
   const testimonios: TestimonioData[] =
-    (await client.fetch(TESTIMONIOS_QUERY)) ?? [];
+    (await client.fetch(TESTIMONIOS_QUERY, {}, { next: { revalidate: 60 } })) ??
+    [];
   return <TestimoniosSection testimonios={testimonios} />;
 }

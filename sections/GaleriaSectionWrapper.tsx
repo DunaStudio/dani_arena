@@ -8,7 +8,11 @@ interface GalleryData {
 }
 
 export default async function GaleriaSectionWrapper() {
-  const data: GalleryData | null = await client.fetch(GALLERY_QUERY);
+  const data: GalleryData | null = await client.fetch(
+    GALLERY_QUERY,
+    {},
+    { next: { revalidate: 60 } },
+  );
   const cells: GalleryImage[][] = data?.cells?.map((cell) => cell.images) ?? [];
 
   return <GaleriaSection cells={cells} />;
