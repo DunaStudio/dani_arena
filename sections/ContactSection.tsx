@@ -18,7 +18,10 @@ export default function ContactSection() {
           <h2 className="text-charcoal font-medium text-[28px] md:text-[36px] xl:text-[48px] text-center whitespace-pre-line mt-4 text-pretty">
             <RevealLine delay={0.12}>Tu imagen ya está comunicando.</RevealLine>
 
-            <RevealLine delay={0.2} className="font-light">
+            <RevealLine
+              delay={0.2}
+              className="font-light text-sm md:text-base mt-4"
+            >
               La pregunta es: ¿está comunicando lo que realmente querés
               posicionar?
             </RevealLine>
